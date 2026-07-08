@@ -1,8 +1,15 @@
 # Brisbane Surface Solutions — Materiais públicos
 
-Página web da linha editorial de redes sociais, para visualização e validação do cliente.
+Páginas web para visualização e validação do cliente: linhas editoriais de redes sociais
+e dashboards de performance de tráfego. Sem dados financeiros (isso fica no repositório
+privado de gestão).
 
-- [Linha Editorial (Instagram e Facebook)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial.html)
+Cada entrega vira uma página nova neste repositório, nomeada com o mês/ano de referência.
+Publicado via GitHub Pages a partir da branch `master`.
+
+## Páginas
+
+- [Linha Editorial — Instagram e Facebook (Jul/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial.html)
 
 ---
 Fabricio Kaempf | Estrategista Digital
