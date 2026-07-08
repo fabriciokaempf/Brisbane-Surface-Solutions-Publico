@@ -1,0 +1,452 @@
+<title>Linha Editorial | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --navy-2:#17213d; --navy-3:#1b2748;
+    --orange:#ff6a2c; --red:#ff1a44; --blue:#2f7fc4; --blue-on-dark:#56b5ff;
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --maxw:1080px; --prose:60ch;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+  }
+  :root[data-theme="light"]{
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8; --blue:#2f7fc4;
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--f-sans);line-height:1.65;-webkit-font-smoothing:antialiased;
+    font-size:17px;transition:background .4s ease,color .4s ease}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--orange);font-weight:600;margin:0 0 14px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.08;margin:0}
+  p{margin:0 0 1em}
+  a{color:inherit}
+  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;width:40px;height:40px;
+    border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(15,29,58,.55);
+    color:#fff;cursor:pointer;font-size:16px;display:grid;place-items:center;
+    backdrop-filter:blur(6px);transition:transform .2s ease}
+  .theme-btn:hover{transform:scale(1.08)}
+  .theme-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+  /* HERO */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;
+    padding:96px 0 84px}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 82% -10%,var(--glow),transparent 55%),
+      radial-gradient(90% 80% at 8% 115%,rgba(47,53,111,.5),transparent 60%);
+    pointer-events:none}
+  .hero .wrap{position:relative}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:56px}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12.5px;
+    letter-spacing:.26em;text-transform:uppercase;color:#fff}
+  .brandmark b{color:var(--orange)}
+  .brandline .tag{margin-left:auto;font-size:12.5px;color:rgba(255,255,255,.62);
+    letter-spacing:.02em}
+  .hero .eyebrow{color:var(--orange)}
+  .hero h1{font-size:clamp(38px,6.4vw,74px);font-weight:800;color:#fff;
+    max-width:15ch}
+  .hero h1 .u{color:var(--orange)}
+  .hero .lead{margin-top:26px;max-width:46ch;font-size:clamp(17px,2.1vw,20px);
+    color:rgba(255,255,255,.80);line-height:1.6}
+  .hero .meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;
+    padding:7px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.22);
+    color:rgba(255,255,255,.9);background:rgba(255,255,255,.05)}
+  .chip.b2b{border-color:var(--orange);color:#ffd0b8;background:rgba(255,106,44,.14)}
+
+  /* SECTIONS */
+  section{padding:76px 0}
+  .sec-head{max-width:var(--prose);margin-bottom:40px}
+  .sec-head h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;color:var(--ink)}
+  .sec-head p{margin-top:14px;color:var(--ink-soft);font-size:18px}
+  .prose{max-width:var(--prose)}
+  .prose p{color:var(--ink-soft)}
+  .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.5;color:var(--ink);font-weight:400}
+  .lede .u{color:var(--orange);font-weight:600}
+  .bridge{margin-top:22px;padding:16px 20px;border-left:3px solid var(--orange);
+    background:var(--surface);border-radius:0 10px 10px 0;font-family:var(--f-mono);
+    font-size:14.5px;color:var(--ink);box-shadow:var(--shadow)}
+
+  .alt{background:var(--surface)}
+  .note{font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);
+    padding-top:16px;margin-top:8px;max-width:var(--prose)}
+
+  /* AUDIENCE */
+  .aud{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+  .aud span{padding:9px 15px;border-radius:999px;background:var(--card);
+    border:1px solid var(--line);font-size:14.5px;font-weight:500;color:var(--ink);
+    box-shadow:var(--shadow)}
+
+  /* PILLARS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    transition:transform .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 34px rgba(15,29,58,.14)}
+  .card .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .card .no{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--muted)}
+  .card .mix{font-family:var(--f-mono);font-weight:700;font-size:22px;
+    font-variant-numeric:tabular-nums;color:var(--accent,var(--orange))}
+  .card h3{margin-top:12px;font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .card p{margin:10px 0 16px;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+  .card .bar{height:5px;border-radius:999px;background:var(--line);overflow:hidden}
+  .card .bar i{display:block;height:100%;border-radius:999px;background:var(--accent,var(--orange));
+    width:var(--w,20%)}
+  .card.o{--accent:var(--orange)} .card.b{--accent:var(--blue)} .card.r{--accent:var(--red)}
+
+  /* VOCAB */
+  .voc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--card)}
+  .voc .h{padding:14px 18px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;font-weight:600}
+  .voc .h.use{background:rgba(255,106,44,.12);color:var(--orange)}
+  .voc .h.no{background:var(--surface);color:var(--muted)}
+  .voc .r{padding:13px 18px;border-top:1px solid var(--line);font-size:14.5px}
+  .voc .r.use{color:var(--ink)}
+  .voc .r.no{color:var(--muted);border-left:1px solid var(--line)}
+  .hooks{margin-top:20px;display:grid;gap:10px}
+  .hooks li{list-style:none;padding-left:26px;position:relative;color:var(--ink-soft);
+    font-size:15px;line-height:1.5}
+  .hooks li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;
+    border-radius:2px;background:var(--orange)}
+  .hooks ul{margin:0;padding:0}
+
+  /* VOICE */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .vbox{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;box-shadow:var(--shadow)}
+  .vbox h4{margin:0 0 14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase}
+  .vbox.do h4{color:var(--orange)} .vbox.dont h4{color:var(--red)}
+  .vbox ul{margin:0;padding:0;display:grid;gap:11px}
+  .vbox li{list-style:none;font-size:14.5px;color:var(--ink-soft);line-height:1.5;
+    padding-left:22px;position:relative}
+  .vbox.do li::before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:700}
+  .vbox.dont li::before{content:"\2715";position:absolute;left:0;color:var(--red);font-weight:700}
+
+  /* OPS */
+  .ops{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .op{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;
+    box-shadow:var(--shadow)}
+  .op .k{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:10px}
+  .op .v{font-size:15px;color:var(--ink);line-height:1.5}
+  .op .v b{color:var(--ink);font-weight:700}
+  .op .big{font-size:30px;font-weight:800;color:var(--orange);letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+  .tags span{font-family:var(--f-mono);font-size:12px;color:var(--blue);
+    background:rgba(47,127,196,.10);padding:4px 9px;border-radius:6px}
+
+  /* CALENDAR */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:520px}
+  th,td{text-align:left;padding:14px 18px;font-size:14.5px;border-bottom:1px solid var(--line)}
+  thead th{background:var(--navy);color:#fff;font-family:var(--f-mono);font-size:11.5px;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  td .d{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  td .pill{font-family:var(--f-mono);font-size:12px;color:var(--ink-soft)}
+  td:last-child{color:var(--ink-soft)}
+
+  /* CLOSE */
+  .close{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .close::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(90% 120% at 90% 120%,var(--glow),transparent 55%);pointer-events:none}
+  .close .wrap{position:relative}
+  .close .eyebrow{color:var(--orange)}
+  .close h2{color:#fff;font-size:clamp(24px,3.4vw,34px);font-weight:800;max-width:20ch}
+  .close p{color:rgba(255,255,255,.78);max-width:52ch;margin-top:16px}
+  .foot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+    font-size:13px;color:rgba(255,255,255,.6)}
+  .foot b{color:#fff;font-weight:600}
+  .foot .r{margin-left:auto;font-family:var(--f-mono);letter-spacing:.06em}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:640px){
+    .voc{grid-template-columns:1fr} .cols{grid-template-columns:1fr}
+    .voc .r.no{border-left:none} section{padding:56px 0} .hero{padding:72px 0 64px}
+    .brandline{margin-bottom:40px} .brandline .tag{display:none}
+  }
+</style>
+
+<button class="theme-btn" id="themeBtn" aria-label="Alternar tema claro e escuro">◐</button>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="brandmark">BRISBANE <b>SURFACE</b> SOLUTIONS</span>
+      <span class="tag">Brisbane's Trusted Surface Experts</span>
+    </div>
+    <p class="eyebrow">Linha Editorial &middot; Instagram &amp; Facebook</p>
+    <h1>The groundwork behind <span class="u">every floor</span> that lasts.</h1>
+    <p class="lead">A base que faz o piso durar. Uma linha de conteúdo pensada para
+      falar com quem decide obra, do fit-out ao galpão, e posicionar a BSS como o
+      parceiro de preparação em que builders confiam.</p>
+    <div class="meta">
+      <span class="chip b2b">Foco B2B &middot; obras de médio e grande porte</span>
+      <span class="chip">3 posts / semana</span>
+      <span class="chip">Voz australiana</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Posicionamento</p>
+    <div class="prose reveal">
+      <p class="lede">A Brisbane Surface Solutions não vende o acabamento. Entrega a
+        <span class="u">base</span>, nivelamento, reparo e preparação de superfície, que faz o
+        piso que vem depois durar, sem falhar, sem levantar e sem atrasar a obra.</p>
+      <p style="margin-top:20px">É o parceiro de preparação (trade partner) em que builders,
+        construtoras e installers confiam. Posicionamento de infraestrutura de obra, não de
+        reparo pontual. Isso eleva a marca e atrai naturalmente o olhar de quem toca projeto de porte.</p>
+      <div class="bridge">From a fit-out to a full warehouse slab, same standard.</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Para quem falamos</p>
+      <h2>Público-alvo</h2>
+    </div>
+    <div class="aud reveal">
+      <span>Builders e construtoras</span>
+      <span>Project e site managers</span>
+      <span>Empresas de fit-out e reforma comercial</span>
+      <span>Facility, property e strata managers</span>
+      <span>Trades que subcontratam preparação</span>
+    </div>
+    <p class="note reveal">O alcance orgânico do Instagram e Facebook é amplo, então parte de quem
+      engaja será residencial. Tratamos isso como alcance e prova social incidental, nunca como alvo.
+      Toda a comunicação fala a língua da obra.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O que publicamos</p>
+      <h2>Seis pilares de conteúdo</h2>
+      <p>Cada pilar tem um papel e um peso no mês. Juntos, provam competência e constroem autoridade.</p>
+    </div>
+    <div class="grid">
+      <article class="card o reveal">
+        <div class="top"><span class="no">PILAR 01</span><span class="mix">25%</span></div>
+        <h3>Prova &middot; before &amp; after</h3>
+        <p>Provar padrão e escala. Legenda técnica: m², "ready to coat", handover.</p>
+        <div class="bar"><i style="--w:100%"></i></div>
+      </article>
+      <article class="card b reveal">
+        <div class="top"><span class="no">PILAR 02</span><span class="mix">15%</span></div>
+        <h3>Processo &middot; behind the grind</h3>
+        <p>Domínio de ofício. Reel cru de grinding e screed, com extração H-class (compliance).</p>
+        <div class="bar"><i style="--w:60%"></i></div>
+      </article>
+      <article class="card o reveal">
+        <div class="top"><span class="no">PILAR 03</span><span class="mix">20%</span></div>
+        <h3>Educação &middot; specify it right</h3>
+        <p>Autoridade. CSP, why coatings fail without prep, checklist para o builder.</p>
+        <div class="bar"><i style="--w:80%"></i></div>
+      </article>
+      <article class="card r reveal">
+        <div class="top"><span class="no">PILAR 04</span><span class="mix">20%</span></div>
+        <h3>Sílica &amp; compliance</h3>
+        <p>O ímã B2B. "We keep your site compliant." Reduz o risco legal da obra do builder.</p>
+        <div class="bar"><i style="--w:80%"></i></div>
+      </article>
+      <article class="card b reveal">
+        <div class="top"><span class="no">PILAR 05</span><span class="mix">10%</span></div>
+        <h3>Escala &middot; ready for bigger</h3>
+        <p>Sinal de porte. Galpão, fit-out, m², program, after-hours.</p>
+        <div class="bar"><i style="--w:40%"></i></div>
+      </article>
+      <article class="card o reveal">
+        <div class="top"><span class="no">PILAR 06</span><span class="mix">10%</span></div>
+        <h3>Time &amp; confiança</h3>
+        <p>Rosto do Leandro, prova de builders, free quotes.</p>
+        <div class="bar"><i style="--w:40%"></i></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O detalhe que separa local de importado</p>
+      <h2>Vocabulário AU / Brisbane</h2>
+      <p>A copy em inglês precisa soar como um profissional de Brisbane escreveu. Grafia australiana,
+        sistema métrico e termos de obra locais são sinal de credibilidade.</p>
+    </div>
+    <div class="voc reveal">
+      <div class="h use">Use (AU)</div>
+      <div class="h no">Em vez de</div>
+      <div class="r use">optimise, colour, metre, levelling</div>
+      <div class="r no">optimize, color, meter, leveling</div>
+      <div class="r use">tradie, subbie, concreter, on the tools</div>
+      <div class="r no">worker, contractor guy</div>
+      <div class="r use">site, fitout, slab, screed, self-leveller, reo</div>
+      <div class="r no">jobsite, buildout</div>
+      <div class="r use">footpath, car park, mobile, rubbish</div>
+      <div class="r no">sidewalk, parking lot, cell phone, trash</div>
+      <div class="r use">m², mm (sempre métrico)</div>
+      <div class="r no">feet, inches, sqft</div>
+    </div>
+    <div class="hooks reveal">
+      <ul>
+        <li>Solo reativo de Brisbane (reactive clay): explica tecnicamente por que lajes e pisos movem e racham.</li>
+        <li>Queenslander e stumps, wet season e umidade no concreto: contexto local real.</li>
+        <li>Suburbs por nome (Stafford Heights, Chermside, Logan, Ipswich, Redland, Moreton Bay) e SEQ: geotag e SEO local.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Como soamos</p>
+      <h2>Voz e tom</h2>
+      <p>O profissional confiável que fala reto. Direto, específico, seguro, sem jargão de marketing.</p>
+    </div>
+    <div class="cols">
+      <div class="vbox do reveal">
+        <h4>Faça</h4>
+        <ul>
+          <li>Números e escala: m², prazo, "in a day".</li>
+          <li>Falar a próxima etapa: "ready for the coating crew".</li>
+          <li>Diferenciais como padrão: "fully insured and silica-compliant".</li>
+          <li>Hook forte na primeira linha da legenda.</li>
+          <li>Deixar o trabalho falar: vídeo cru vale mais que produção.</li>
+        </ul>
+      </div>
+      <div class="vbox dont reveal">
+        <h4>Não faça</h4>
+        <ul>
+          <li>Linguagem de "probleminha" ou pequeno reparo.</li>
+          <li>Competir em "piso bonito": a BSS é a base, não o acabamento.</li>
+          <li>Jargão de marketing: "premium", "we exceed expectations".</li>
+          <li>"Cheap" ou "budget": usar "no hidden costs".</li>
+          <li>Americanismos que entregam copy importada.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Como roda</p>
+      <h2>Operação</h2>
+    </div>
+    <div class="ops">
+      <div class="op reveal">
+        <div class="k">Cadência</div>
+        <div class="big">3x</div>
+        <div class="v">posts por semana, entre feed e reels.</div>
+      </div>
+      <div class="op reveal">
+        <div class="k">Horários (AEST)</div>
+        <div class="v"><b>7h</b> conteúdo B2B, <b>18h</b> marca e time. Melhores dias: terça, quarta e quinta.</div>
+      </div>
+      <div class="op reveal">
+        <div class="k">Métrica-norte</div>
+        <div class="v"><b>Salvamentos, compartilhamentos e DMs</b> de orçamento. Não curtidas.</div>
+      </div>
+      <div class="op reveal">
+        <div class="k">Hashtags &amp; alcance</div>
+        <div class="v">Geotag do suburb e SEO na legenda.</div>
+        <div class="tags">
+          <span>#concreterepairs</span><span>#floorlevelling</span>
+          <span>#surfaceprep</span><span>#brisbane</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Estreia 10/07</p>
+      <h2>Calendário inicial</h2>
+      <p>As duas primeiras semanas. Sílica e educação já rodam sem depender de footage.</p>
+    </div>
+    <div class="tablewrap reveal">
+      <table>
+        <thead><tr><th>Data</th><th>Hora</th><th>Pilar</th><th>Formato</th></tr></thead>
+        <tbody>
+          <tr><td><span class="d">Sex 10/07</span></td><td class="pill">18h</td><td>Estreia</td><td>Fundador + posicionamento</td></tr>
+          <tr><td><span class="d">Ter 14/07</span></td><td class="pill">7h</td><td>Prova</td><td>Before/after de obra (m² + handover)</td></tr>
+          <tr><td><span class="d">Qui 16/07</span></td><td class="pill">18h</td><td>Processo</td><td>Reel de grinding/screed (áudio original)</td></tr>
+          <tr><td><span class="d">Ter 21/07</span></td><td class="pill">7h</td><td>Sílica</td><td>Carrossel educativo (gráfico)</td></tr>
+          <tr><td><span class="d">Qua 22/07</span></td><td class="pill">18h</td><td>Educação</td><td>Carrossel "why coatings fail"</td></tr>
+          <tr><td><span class="d">Qui 23/07</span></td><td class="pill">7h</td><td>Escala</td><td>Obra ampla / comercial + m²</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow reveal">O próximo passo</p>
+    <h2 class="reveal">Validação e a primeira leva de conteúdo.</h2>
+    <p class="reveal">Com o teu de acordo nesta linha e as fotos e vídeos reais dos jobs em mãos,
+      a gente concebe os primeiros posts, já na voz australiana e revisados. Os pilares de sílica
+      e educação podem estrear no dia 10 sem depender de footage.</p>
+    <div class="foot reveal">
+      <span>Concebido por <b>Fabricio Kaempf</b> &middot; Estrategista Digital</span>
+      <span class="r">@fabriciokaempf</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var btn=document.getElementById('themeBtn');
+    function sysDark(){return window.matchMedia('(prefers-color-scheme:dark)').matches;}
+    function cur(){var t=document.documentElement.getAttribute('data-theme');return t?t:(sysDark()?'dark':'light');}
+    btn.addEventListener('click',function(){
+      var next=cur()==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next);
+    });
+    var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els=document.querySelectorAll('.reveal');
+    if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
