@@ -10,6 +10,7 @@ Publicado via GitHub Pages a partir da branch `master`.
 ## Páginas
 
 - [Linha Editorial — Instagram e Facebook (Jul/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial.html)
+- [Roteiros de Conteúdo — o que gravar e o que publicar (Jul/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/roteiros-julho2026.html)
 
 ---
 Fabricio Kaempf | Estrategista Digital

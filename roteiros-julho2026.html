@@ -1,0 +1,426 @@
+<title>Roteiros de Conteúdo | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --navy-2:#17213d;
+    --orange:#ff6a2c; --red:#ff1a44; --blue:#2f7fc4;
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --ok-bg:#e9f6ee; --ok-tx:#0f7a44; --ok-bd:#bfe6cd;
+    --wait-bg:#fff3e6; --wait-tx:#b9560a; --wait-bd:#f6d4ad;
+    --art-bg:#eef1fb; --art-tx:#3946a8; --art-bd:#ccd3f2;
+    --maxw:900px;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+      --ok-bg:rgba(15,122,68,.16); --ok-tx:#5fd695; --ok-bd:rgba(95,214,149,.35);
+      --wait-bg:rgba(185,86,10,.16); --wait-tx:#ffb46b; --wait-bd:rgba(255,180,107,.35);
+      --art-bg:rgba(57,70,168,.20); --art-tx:#a8b2f2; --art-bd:rgba(168,178,242,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --ok-bg:rgba(15,122,68,.16); --ok-tx:#5fd695; --ok-bd:rgba(95,214,149,.35);
+    --wait-bg:rgba(185,86,10,.16); --wait-tx:#ffb46b; --wait-bd:rgba(255,180,107,.35);
+    --art-bg:rgba(57,70,168,.20); --art-tx:#a8b2f2; --art-bd:rgba(168,178,242,.35);
+  }
+  :root[data-theme="light"]{
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --ok-bg:#e9f6ee; --ok-tx:#0f7a44; --ok-bd:#bfe6cd;
+    --wait-bg:#fff3e6; --wait-tx:#b9560a; --wait-bd:#f6d4ad;
+    --art-bg:#eef1fb; --art-tx:#3946a8; --art-bd:#ccd3f2;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16.5px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.12;margin:0}
+  p{margin:0 0 1em}
+  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;width:38px;height:38px;
+    border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(15,29,58,.55);
+    color:#fff;cursor:pointer;font-size:15px;display:grid;place-items:center;backdrop-filter:blur(6px)}
+  .theme-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+  header.hero{background:var(--navy);color:#fff;padding:52px 0 40px;position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(110% 90% at 85% -10%,var(--glow),transparent 55%);pointer-events:none}
+  header.hero .wrap{position:relative}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12px;letter-spacing:.24em;
+    text-transform:uppercase;color:#fff}
+  .brandmark b{color:var(--orange)}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--orange);font-weight:600;margin:0 0 12px}
+  header.hero h1{font-size:clamp(28px,4.6vw,42px);font-weight:800;color:#fff;max-width:18ch}
+  header.hero .lead{margin-top:16px;max-width:56ch;font-size:16.5px;color:rgba(255,255,255,.80)}
+  .legend{margin-top:26px;display:flex;flex-wrap:wrap;gap:9px}
+  .legend span{font-family:var(--f-mono);font-size:11.5px;padding:5px 11px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.85)}
+  .legend .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:1px}
+
+  main{padding:44px 0 70px}
+  .post{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden}
+  .post-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;
+    padding:20px 24px 16px;border-bottom:1px solid var(--line)}
+  .post-num{font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+  .post-head h2{font-size:19px;font-weight:700;flex:1;min-width:200px}
+  .badge{font-family:var(--f-mono);font-size:11px;font-weight:700;letter-spacing:.05em;
+    padding:5px 11px;border-radius:999px;border:1px solid;white-space:nowrap}
+  .badge.ok{background:var(--ok-bg);color:var(--ok-tx);border-color:var(--ok-bd)}
+  .badge.wait{background:var(--wait-bg);color:var(--wait-tx);border-color:var(--wait-bd)}
+  .badge.art{background:var(--art-bg);color:var(--art-tx);border-color:var(--art-bd)}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px 18px;padding:14px 24px;font-size:13.5px;
+    color:var(--muted);border-bottom:1px solid var(--line);background:var(--surface)}
+  .meta-row b{color:var(--ink-soft);font-weight:600}
+  .post-body{padding:20px 24px 24px}
+  .block{margin-bottom:18px}
+  .block:last-child{margin-bottom:0}
+  .block h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--orange);margin-bottom:9px}
+  .shotlist{margin:0;padding:0;display:grid;gap:7px}
+  .shotlist li{list-style:none;padding-left:22px;position:relative;font-size:14.5px;
+    color:var(--ink-soft);line-height:1.5}
+  .shotlist li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;
+    border-radius:2px;border:2px solid var(--blue)}
+  .hook{font-size:16px;font-weight:600;color:var(--ink);padding:10px 14px;background:var(--surface);
+    border-left:3px solid var(--orange);border-radius:0 8px 8px 0}
+  .caption{font-size:14.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line);
+    border-radius:10px;padding:16px 18px;white-space:pre-line;line-height:1.7}
+  .slides{margin:0;padding:0;counter-reset:slide;display:grid;gap:10px}
+  .slides li{list-style:none;counter-increment:slide;padding:10px 14px 10px 40px;position:relative;
+    background:var(--surface);border:1px solid var(--line);border-radius:8px;font-size:14px;
+    color:var(--ink-soft)}
+  .slides li::before{content:counter(slide);position:absolute;left:12px;top:9px;
+    font-family:var(--f-mono);font-weight:700;font-size:12px;color:var(--orange)}
+  .tagsrow{display:flex;flex-wrap:wrap;gap:14px 22px;font-size:13.5px}
+  .tagsrow .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:4px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tags span{font-family:var(--f-mono);font-size:12px;color:var(--blue);background:rgba(47,127,196,.10);
+    padding:3px 8px;border-radius:6px}
+  .note{font-size:13.5px;color:var(--muted);font-style:italic}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.75);padding:26px 0;font-size:13px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+  footer b{color:#fff}
+  footer .r{margin-left:auto;font-family:var(--f-mono);letter-spacing:.06em}
+
+  @media (max-width:600px){
+    header.hero{padding:40px 0 32px} .post-body{padding:18px} .meta-row{padding:12px 18px}
+    .post-head{padding:16px 18px 14px}
+  }
+</style>
+
+<button class="theme-btn" id="themeBtn" aria-label="Alternar tema claro e escuro">◐</button>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="brandmark">BRISBANE <b>SURFACE</b> SOLUTIONS</span>
+    </div>
+    <p class="eyebrow">Roteiros de conteúdo &middot; Julho 2026</p>
+    <h1>O que gravar e o que publicar</h1>
+    <p class="lead">Leandro, aqui está o roteiro de cada post do primeiro mês: o que fotografar
+      ou filmar no job, o texto já pronto para colar na legenda, e as hashtags. Onde está marcado
+      "precisa gravar", é só usar o celular mesmo, no dia a dia da obra.</p>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--ok-tx)"></i>Pronto para gravar</span>
+      <span><i class="dot" style="background:var(--wait-tx)"></i>Precisa gravar</span>
+      <span><i class="dot" style="background:var(--art-tx)"></i>Arte em produção</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <article class="post">
+      <div class="post-head">
+        <span class="post-num">POST 01</span>
+        <h2>Estreia &middot; fundador e posicionamento</h2>
+        <span class="badge ok">Pronto para gravar</span>
+      </div>
+      <div class="meta-row">
+        <span><b>Sex 10/07</b> &middot; 18h</span>
+        <span>Pilar: Time &amp; confiança</span>
+        <span>Feed ou Reel curto</span>
+      </div>
+      <div class="post-body">
+        <div class="block">
+          <h4>O que gravar</h4>
+          <ul class="shotlist">
+            <li>Uma foto (ou vídeo curto) sua, em obra ou com o equipamento, rosto visível. Não precisa ser em estúdio.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Hook</h4>
+          <p class="hook">Hi, I'm Leandro, founder of Brisbane Surface Solutions.</p>
+        </div>
+        <div class="block">
+          <h4>Legenda completa</h4>
+          <div class="caption">Hi, I'm Leandro, founder of Brisbane Surface Solutions.
+
+Three and a half years in the trade, prepping and repairing concrete surfaces across Brisbane, before I set out on my own. I started this business to be the trade partner builders can rely on: get the surface flat, sound and ready, so the next trade isn't held up and the finish actually lasts.
+
+We don't sell the finish. We deliver the base that makes it work. From a fit-out to a full warehouse slab, same standard. Fully insured, silica-compliant, no hidden costs.
+
+Servicing Brisbane, Logan, Ipswich, Redland and Moreton Bay.
+
+Free quote? DM us or call 0438 648 554.</div>
+        </div>
+        <div class="tagsrow">
+          <div>
+            <div class="k">Hashtags</div>
+            <div class="tags"><span>#concreterepairs</span><span>#floorlevelling</span><span>#surfaceprep</span><span>#tradieaustralia</span><span>#builder</span><span>#brisbane</span><span>#qldbusiness</span></div>
+          </div>
+          <div>
+            <div class="k">Geotag</div>
+            <div class="tags"><span>Brisbane, QLD</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <span class="post-num">POST 02</span>
+        <h2>Prova &middot; before / after de obra</h2>
+        <span class="badge wait">Precisa gravar</span>
+      </div>
+      <div class="meta-row">
+        <span><b>Ter 14/07</b> &middot; 7h</span>
+        <span>Pilar: Prova</span>
+        <span>Carrossel (2 fotos) ou Reel</span>
+      </div>
+      <div class="post-body">
+        <div class="block">
+          <h4>O que gravar</h4>
+          <ul class="shotlist">
+            <li>Foto do piso ou laje ANTES: irregular, com fissura, desnível ou substrato antigo à mostra.</li>
+            <li>Foto do MESMO ponto DEPOIS: nivelado, reparado, pronto para o próximo trade.</li>
+            <li>Se der, um plano aberto que mostre a escala (trena ou pessoa de referência).</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Hook</h4>
+          <p class="hook">Uneven slab to dead flat, ready for the next trade.</p>
+        </div>
+        <div class="block">
+          <h4>Legenda completa <span class="note">(preencher os m² reais)</span></h4>
+          <div class="caption">[XX]sqm slab levelled and prepped in a day. Flat, sound, clean handover, so the next trade walks straight in.
+
+This is what "ready to tile" actually looks like.
+
+Free quote in the DMs or call 0438 648 554.</div>
+        </div>
+        <div class="tagsrow">
+          <div>
+            <div class="k">Hashtags</div>
+            <div class="tags"><span>#concreterepairs</span><span>#floorlevelling</span><span>#beforeandafter</span><span>#tradieaustralia</span><span>#builder</span><span>#brisbane</span></div>
+          </div>
+          <div>
+            <div class="k">Geotag</div>
+            <div class="tags"><span>suburb do job</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <span class="post-num">POST 03</span>
+        <h2>Processo &middot; grinding / screed</h2>
+        <span class="badge wait">Precisa gravar</span>
+      </div>
+      <div class="meta-row">
+        <span><b>Qui 16/07</b> &middot; 18h</span>
+        <span>Pilar: Processo</span>
+        <span>Reel, 15 a 30 segundos, áudio original</span>
+      </div>
+      <div class="post-body">
+        <div class="block">
+          <h4>O que gravar</h4>
+          <ul class="shotlist">
+            <li>Close no disco da grinder tocando o concreto.</li>
+            <li>Plano aberto com a extração H-class conectada (mangueira visível, sem poeira no ar).</li>
+            <li>Se houver, o self-leveller sendo espalhado e se autonivelando.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Hook</h4>
+          <p class="hook">Self-levelling screed doing its thing.</p>
+        </div>
+        <div class="block">
+          <h4>Legenda completa</h4>
+          <div class="caption">Poured, spread, and it finds its own level. This is why a finished floor stays flat for years, no lippage, no callbacks.
+
+H-class extraction runs on every job, so the site stays clean and compliant.
+
+Brisbane wide. Free quote, DM or call 0438 648 554.</div>
+        </div>
+        <div class="tagsrow">
+          <div>
+            <div class="k">Hashtags</div>
+            <div class="tags"><span>#concretegrinding</span><span>#screed</span><span>#selfleveller</span><span>#siteworks</span><span>#tradieaustralia</span><span>#brisbane</span></div>
+          </div>
+          <div>
+            <div class="k">Geotag</div>
+            <div class="tags"><span>suburb do job</span></div>
+          </div>
+        </div>
+        <p class="note">Grave cru, sem cortes demais. Áudio original da máquina vale mais que música por cima.</p>
+      </div>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <span class="post-num">POST 04</span>
+        <h2>Sílica &amp; compliance &middot; carrossel educativo</h2>
+        <span class="badge art">Arte em produção</span>
+      </div>
+      <div class="meta-row">
+        <span><b>Ter 21/07</b> &middot; 7h</span>
+        <span>Pilar: Sílica &amp; compliance</span>
+        <span>Carrossel gráfico, 6 slides</span>
+      </div>
+      <div class="post-body">
+        <div class="block">
+          <h4>Roteiro dos slides</h4>
+          <ol class="slides">
+            <li>New silica laws. What every Brisbane builder needs to know.</li>
+            <li>From 1 September 2024, crystalline silica work is regulated under WHS law across Australia.</li>
+            <li>From 1 December 2026, the exposure standard (0.05mg/m³) becomes a legal Workplace Exposure Limit.</li>
+            <li>If your sub isn't compliant, the risk sits with the builder, the PCBU who hired them.</li>
+            <li>We run wet suppression and H-class extraction on every job. No dry cutting, no dust cloud.</li>
+            <li>Fully insured, silica-compliant. Ask us before your next pour or grind. DM or call 0438 648 554.</li>
+          </ol>
+        </div>
+        <div class="tagsrow">
+          <div>
+            <div class="k">Hashtags</div>
+            <div class="tags"><span>#silicasafety</span><span>#WHS</span><span>#buildercompliance</span><span>#concretegrinding</span><span>#brisbane</span></div>
+          </div>
+          <div>
+            <div class="k">Geotag</div>
+            <div class="tags"><span>Brisbane, QLD</span></div>
+          </div>
+        </div>
+        <p class="note">Peça 100% gráfica, sem depender de foto de job. Nada para você gravar aqui.</p>
+      </div>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <span class="post-num">POST 05</span>
+        <h2>Educação &middot; why coatings fail</h2>
+        <span class="badge art">Arte em produção</span>
+      </div>
+      <div class="meta-row">
+        <span><b>Qua 22/07</b> &middot; 18h</span>
+        <span>Pilar: Educação</span>
+        <span>Carrossel gráfico, 5 slides</span>
+      </div>
+      <div class="post-body">
+        <div class="block">
+          <h4>Roteiro dos slides</h4>
+          <ol class="slides">
+            <li>Why your new coating or tiles cracked. Hint: it's usually not the installer.</li>
+            <li>9 times out of 10, it's the prep, not the finish.</li>
+            <li>CSP, Concrete Surface Profile, has to match the coating or adhesive system. Skip it, and it fails.</li>
+            <li>3 questions to ask before anyone coats or tiles your floor: Has the surface been profiled to spec? Is it free of laitance, oil and old adhesive? Has moisture content been tested?</li>
+            <li>Want us to check your site first? DM or call 0438 648 554.</li>
+          </ol>
+        </div>
+        <div class="tagsrow">
+          <div>
+            <div class="k">Hashtags</div>
+            <div class="tags"><span>#floorprep</span><span>#concretesurfaceprofile</span><span>#concreterepairs</span><span>#builder</span><span>#brisbane</span></div>
+          </div>
+          <div>
+            <div class="k">Geotag</div>
+            <div class="tags"><span>Brisbane, QLD</span></div>
+          </div>
+        </div>
+        <p class="note">Mesma peça gráfica do Post 04, mesma paleta, série reconhecível. Nada para você gravar aqui.</p>
+      </div>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <span class="post-num">POST 06</span>
+        <h2>Escala &middot; obra ampla ou comercial</h2>
+        <span class="badge wait">Precisa gravar</span>
+      </div>
+      <div class="meta-row">
+        <span><b>Qui 23/07</b> &middot; 7h</span>
+        <span>Pilar: Escala</span>
+        <span>Foto ou Reel</span>
+      </div>
+      <div class="post-body">
+        <div class="block">
+          <h4>O que gravar</h4>
+          <ul class="shotlist">
+            <li>Plano aberto que mostre a escala da área (galpão, fit-out comercial).</li>
+            <li>Equipe e/ou equipamento em ação, visível no quadro.</li>
+            <li>Se possível, um raccord rápido de antes/durante.</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h4>Hook <span class="note">(preencher os m² reais)</span></h4>
+          <p class="hook">[XX]sqm warehouse floor prepped and ready for the coating crew.</p>
+        </div>
+        <div class="block">
+          <h4>Legenda completa</h4>
+          <div class="caption">We scale to the job. From a single repair to a full warehouse slab, same standard, same team.
+
+We work around your build program, including after-hours and weekend prep, so your trades aren't held up.
+
+Ready for your next commercial or industrial job? DM or call 0438 648 554.</div>
+        </div>
+        <div class="tagsrow">
+          <div>
+            <div class="k">Hashtags</div>
+            <div class="tags"><span>#commercialflooring</span><span>#warehouseflooring</span><span>#fitout</span><span>#tradieaustralia</span><span>#brisbane</span><span>#qldbusiness</span></div>
+          </div>
+          <div>
+            <div class="k">Geotag</div>
+            <div class="tags"><span>suburb do job</span></div>
+          </div>
+        </div>
+        <p class="note">Este é o job mais amplo que houver disponível. É a prova de escala que sustenta o pilar.</p>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Concebido por <b>Fabricio Kaempf</b> &middot; Estrategista Digital</span>
+    <span class="r">@fabriciokaempf</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var sysDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
+    var isDark = cur ? cur === 'dark' : sysDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  });
+</script>
