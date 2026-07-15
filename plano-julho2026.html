@@ -1,0 +1,280 @@
+<title>Plano de Conteúdo Julho | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --navy-2:#17213d;
+    --orange:#ff6a2c; --red:#ff1a44; --blue:#2f7fc4;
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --you-bg:#fff3e6; --you-tx:#b9560a; --you-bd:#f6d4ad;
+    --us-bg:#eef1fb; --us-tx:#3946a8; --us-bd:#ccd3f2;
+    --maxw:920px;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+      --you-bg:rgba(185,86,10,.16); --you-tx:#ffb46b; --you-bd:rgba(255,180,107,.35);
+      --us-bg:rgba(57,70,168,.20); --us-tx:#a8b2f2; --us-bd:rgba(168,178,242,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --you-bg:rgba(185,86,10,.16); --you-tx:#ffb46b; --you-bd:rgba(255,180,107,.35);
+    --us-bg:rgba(57,70,168,.20); --us-tx:#a8b2f2; --us-bd:rgba(168,178,242,.35);
+  }
+  :root[data-theme="light"]{
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --you-bg:#fff3e6; --you-tx:#b9560a; --you-bd:#f6d4ad;
+    --us-bg:#eef1fb; --us-tx:#3946a8; --us-bd:#ccd3f2;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16.5px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.12;margin:0}
+  p{margin:0 0 1em}
+  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;width:38px;height:38px;
+    border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(15,29,58,.55);
+    color:#fff;cursor:pointer;font-size:15px;display:grid;place-items:center;backdrop-filter:blur(6px)}
+  .theme-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+  header.hero{background:var(--navy);color:#fff;padding:54px 0 44px;position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(110% 90% at 85% -10%,var(--glow),transparent 55%);pointer-events:none}
+  header.hero .wrap{position:relative}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:32px}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12px;letter-spacing:.24em;
+    text-transform:uppercase;color:#fff}
+  .brandmark b{color:var(--orange)}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--orange);font-weight:600;margin:0 0 12px}
+  header.hero h1{font-size:clamp(30px,5vw,46px);font-weight:800;color:#fff;max-width:16ch}
+  header.hero .lead{margin-top:16px;max-width:54ch;font-size:16.5px;color:rgba(255,255,255,.82)}
+  .chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:9px}
+  .chips span{font-family:var(--f-mono);font-size:11.5px;padding:6px 12px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.88)}
+
+  main{padding:44px 0 40px}
+  section{margin-bottom:44px}
+  .sec-head{margin-bottom:20px}
+  .sec-head .eyebrow{color:var(--orange)}
+  .sec-head h2{font-size:clamp(22px,3.4vw,30px);font-weight:800;color:var(--ink)}
+  .sec-head p{margin-top:10px;color:var(--ink-soft);max-width:60ch}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:560px}
+  th,td{text-align:left;padding:13px 16px;font-size:14.5px;border-bottom:1px solid var(--line);vertical-align:middle}
+  thead th{background:var(--navy);color:#fff;font-family:var(--f-mono);font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  td .d{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  td .h{font-family:var(--f-mono);font-size:12.5px;color:var(--ink-soft)}
+  .tag{font-family:var(--f-mono);font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;
+    border:1px solid;white-space:nowrap;display:inline-block}
+  .tag.you{background:var(--you-bg);color:var(--you-tx);border-color:var(--you-bd)}
+  .tag.us{background:var(--us-bg);color:var(--us-tx);border-color:var(--us-bd)}
+
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--orange);
+    border-radius:0 12px 12px 0;padding:16px 20px;box-shadow:var(--shadow);font-size:15px;color:var(--ink-soft)}
+  .callout b{color:var(--ink);font-weight:700}
+
+  .shot{display:grid;grid-template-columns:auto 1fr;gap:18px;background:var(--card);
+    border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);margin-bottom:16px}
+  .shot .n{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;
+    place-items:center;font-weight:800;font-size:18px;font-family:var(--f-mono)}
+  .shot .head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:4px}
+  .shot h3{font-size:18px;font-weight:700;color:var(--ink)}
+  .shot .for{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+  .badge{font-family:var(--f-mono);font-size:10.5px;font-weight:700;letter-spacing:.05em;
+    padding:4px 9px;border-radius:999px;border:1px solid}
+  .badge.urgent{background:rgba(255,26,68,.12);color:var(--red);border-color:rgba(255,26,68,.35)}
+  .shot ul{margin:10px 0 0;padding:0;display:grid;gap:7px}
+  .shot li{list-style:none;padding-left:22px;position:relative;font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+  .shot li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:2px;background:var(--orange)}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.75);padding:26px 0;font-size:13px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+  footer b{color:#fff}
+  footer .r{margin-left:auto;font-family:var(--f-mono);letter-spacing:.06em}
+
+  @media (max-width:560px){
+    header.hero{padding:40px 0 34px} .shot{grid-template-columns:1fr;gap:12px} .shot .n{width:38px;height:38px}
+  }
+</style>
+
+<button class="theme-btn" id="themeBtn" aria-label="Alternar tema claro e escuro">◐</button>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="brandmark">BRISBANE <b>SURFACE</b> SOLUTIONS</span>
+    </div>
+    <p class="eyebrow">Plano de conteúdo &middot; Julho 2026</p>
+    <h1>O que vai ao ar, e o que preciso de você.</h1>
+    <p class="lead">Leandro, este é o plano de Instagram e Facebook até o fim do mês.
+      Embaixo tem o calendário dos posts e, mais importante, a lista do que você
+      precisa fotografar e filmar nos jobs. O texto de cada post eu já escrevo,
+      você só captura as imagens.</p>
+    <div class="chips">
+      <span>16 a 30 de julho</span>
+      <span>7 posts</span>
+      <span>Feed e reels</span>
+      <span>Tudo no celular</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="sec-head">
+        <p class="eyebrow">O calendário</p>
+        <h2>Os 7 posts do mês</h2>
+        <p>Três posts por semana, terça, quarta e quinta. A etiqueta mostra de quem
+          é a imagem: laranja é foto ou vídeo seu, azul é arte que a gente cria aqui.</p>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Hora</th><th>Tema</th><th>Formato</th><th>Imagem</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="d">Qui 16/07</span></td><td><span class="h">18h</span></td><td>Estreia (você e a marca)</td><td>Foto ou reel</td><td><span class="tag you">Foto sua</span></td></tr>
+            <tr><td><span class="d">Ter 21/07</span></td><td><span class="h">7h</span></td><td>Sílica e segurança</td><td>Carrossel</td><td><span class="tag us">Arte nossa</span></td></tr>
+            <tr><td><span class="d">Qua 22/07</span></td><td><span class="h">18h</span></td><td>Antes e depois</td><td>Before/after</td><td><span class="tag you">Foto sua</span></td></tr>
+            <tr><td><span class="d">Qui 23/07</span></td><td><span class="h">7h</span></td><td>Educação (por que pisos falham)</td><td>Carrossel</td><td><span class="tag us">Arte nossa</span></td></tr>
+            <tr><td><span class="d">Ter 28/07</span></td><td><span class="h">18h</span></td><td>Antes e depois (reparo)</td><td>Before/after</td><td><span class="tag you">Foto sua</span></td></tr>
+            <tr><td><span class="d">Qua 29/07</span></td><td><span class="h">7h</span></td><td>O processo</td><td>Reel</td><td><span class="tag you">Vídeo seu</span></td></tr>
+            <tr><td><span class="d">Qui 30/07</span></td><td><span class="h">7h</span></td><td>Obra de porte</td><td>Foto ou reel</td><td><span class="tag you">Foto sua</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <p class="eyebrow">O que capturar</p>
+        <h2>As imagens que preciso de você</h2>
+        <p>Pode ser tudo no celular, sem preocupação com produção. O cru, real do
+          job, funciona melhor do que foto de estúdio. Vai mandando conforme os
+          jobs acontecem.</p>
+      </div>
+
+      <article class="shot">
+        <div class="n">1</div>
+        <div>
+          <div class="head">
+            <h3>Uma foto sua em obra</h3>
+            <span class="for">post de 16/07</span>
+            <span class="badge urgent">É pra já</span>
+          </div>
+          <ul>
+            <li>Você em um job, com o rosto aparecendo.</li>
+            <li>Com equipamento ou EPI no quadro, se der.</li>
+            <li>Nada de estúdio, quanto mais real, melhor.</li>
+            <li>Esta é a única com pressa: preciso hoje ou amanhã de manhã, é a foto da estreia.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="shot">
+        <div class="n">2</div>
+        <div>
+          <div class="head">
+            <h3>Um job de nivelamento, antes e depois</h3>
+            <span class="for">post de 22/07</span>
+          </div>
+          <ul>
+            <li>Foto do piso irregular ou desnivelado ANTES.</li>
+            <li>Foto do mesmo ponto plano e pronto DEPOIS, no mesmo ângulo.</li>
+            <li>Se der, um plano aberto com trena ou uma pessoa no quadro pra mostrar o tamanho.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="shot">
+        <div class="n">3</div>
+        <div>
+          <div class="head">
+            <h3>Um job de reparo, antes e depois</h3>
+            <span class="for">post de 28/07</span>
+          </div>
+          <ul>
+            <li>Rachadura, spalling ou concrete cancer ANTES.</li>
+            <li>O mesmo ponto reparado DEPOIS, no mesmo ângulo.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="shot">
+        <div class="n">4</div>
+        <div>
+          <div class="head">
+            <h3>Um vídeo curto do processo</h3>
+            <span class="for">post de 29/07</span>
+          </div>
+          <ul>
+            <li>15 a 30 segundos, no celular mesmo.</li>
+            <li>A grinder trabalhando de perto.</li>
+            <li>A mangueira da extração conectada, sem nuvem de poeira no ar.</li>
+            <li>Se rolar, o self-leveller sendo despejado e nivelando sozinho.</li>
+            <li>Pode deixar o som da máquina, sem música por cima.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="shot">
+        <div class="n">5</div>
+        <div>
+          <div class="head">
+            <h3>Uma obra maior ou comercial</h3>
+            <span class="for">post de 30/07</span>
+          </div>
+          <ul>
+            <li>Plano aberto de uma área grande, galpão ou fit-out.</li>
+            <li>A equipe ou o equipamento mobilizado no quadro.</li>
+            <li>Me passa os metros quadrados do job, se lembrar.</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="callout">
+        <b>Resumo:</b> a foto do item 1 é a única com pressa (post de estreia, dia 16).
+        Os itens 2 a 5 você vai capturando ao longo das próximas semanas, conforme os
+        jobs acontecem. Qualquer dúvida sobre o que fotografar, é só me chamar.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Concebido por <b>Fabricio Kaempf</b> &middot; Estrategista Digital</span>
+    <span class="r">@fabriciokaempf</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var sysDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
+    var isDark = cur ? cur === 'dark' : sysDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  });
+</script>
