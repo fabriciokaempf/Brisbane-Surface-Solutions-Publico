@@ -3,6 +3,7 @@
   :root{
     --navy:#0f1d3a; --navy-2:#17213d; --navy-3:#1b2748;
     --orange:#ff6a2c; --red:#ff1a44; --blue:#2f7fc4; --blue-on-dark:#56b5ff;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
     --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
     --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
     --line:#e4e2dc; --line-strong:#d3d0c8;
@@ -18,6 +19,7 @@
       --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
       --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
       --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
     }
   }
   :root[data-theme="dark"]{
@@ -25,11 +27,13 @@
     --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
     --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
     --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
   }
   :root[data-theme="light"]{
     --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
     --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
     --line:#e4e2dc; --line-strong:#d3d0c8; --blue:#2f7fc4;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
     --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
   }
   *{box-sizing:border-box}
@@ -171,6 +175,9 @@
   td .d{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
   td .pill{font-family:var(--f-mono);font-size:12px;color:var(--ink-soft)}
   td:last-child{color:var(--ink-soft)}
+  td .ok{display:inline-block;font-family:var(--f-mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;color:var(--green);background:var(--green-bg);
+    padding:4px 10px;border-radius:999px;white-space:nowrap}
 
   /* CLOSE */
   .close{background:var(--navy);color:#fff;position:relative;overflow:hidden}
@@ -405,23 +412,32 @@
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="eyebrow">Estreia 17/07</p>
-      <h2>Calendário de julho</h2>
-      <p>De 17 a 30 de julho. Sílica e educação já rodam sem depender de footage, e nenhuma imagem precisa mostrar rosto (equipamento, mãos, botas e obra resolvem).</p>
+      <p class="eyebrow">Julho entregue</p>
+      <h2>Calendário de julho: 7 de 7 no ar</h2>
+      <p>De 17 a 30 de julho, três posts por semana, todos publicados. Nenhum deles dependeu de
+        foto ou vídeo novo: tudo saiu do acervo já existente das obras, garimpado e curado. E nenhuma
+        imagem mostra rosto (equipamento, mãos, botas e obra resolvem).</p>
     </div>
     <div class="tablewrap reveal">
       <table>
-        <thead><tr><th>Data</th><th>Hora</th><th>Pilar</th><th>Formato</th></tr></thead>
+        <thead><tr><th>Data</th><th>Hora</th><th>Pilar</th><th>O que foi publicado</th><th>Status</th></tr></thead>
         <tbody>
-          <tr><td><span class="d">Sex 17/07</span></td><td class="pill">18h</td><td>Estreia</td><td>Carrossel de sílica (arte pronta)</td></tr>
-          <tr><td><span class="d">Ter 21/07</span></td><td class="pill">7h</td><td>Educação</td><td>Carrossel "why coatings fail" (gráfico)</td></tr>
-          <tr><td><span class="d">Qua 22/07</span></td><td class="pill">18h</td><td>Prova</td><td>Before/after de nivelamento (m² + handover)</td></tr>
-          <tr><td><span class="d">Qui 23/07</span></td><td class="pill">7h</td><td>Time</td><td>Apresentação da empresa (equipamento, sem rosto)</td></tr>
-          <tr><td><span class="d">Ter 28/07</span></td><td class="pill">18h</td><td>Prova</td><td>Before/after de resurface (patamar de escada)</td></tr>
-          <tr><td><span class="d">Qua 29/07</span></td><td class="pill">7h</td><td>Processo</td><td>Carrossel de processo (screed, reparo e acabamento)</td></tr>
-          <tr><td><span class="d">Qui 30/07</span></td><td class="pill">7h</td><td>Escala</td><td>Carrossel de escala (altura e pavimento inteiro)</td></tr>
+          <tr><td><span class="d">Sex 17/07</span></td><td class="pill">18h</td><td>Sílica</td><td>Estreia: carrossel de sílica e compliance, 6 slides</td><td><span class="ok">Publicado</span></td></tr>
+          <tr><td><span class="d">Ter 21/07</span></td><td class="pill">7h</td><td>Educação</td><td>Carrossel "why coatings fail", 5 slides</td><td><span class="ok">Publicado</span></td></tr>
+          <tr><td><span class="d">Qua 22/07</span></td><td class="pill">18h</td><td>Prova</td><td>Antes e depois da rampa de garagem, 2 fotos</td><td><span class="ok">Publicado</span></td></tr>
+          <tr><td><span class="d">Qui 23/07</span></td><td class="pill">7h</td><td>Time</td><td>Apresentação da empresa, foto única, voz do Andrew</td><td><span class="ok">Publicado</span></td></tr>
+          <tr><td><span class="d">Ter 28/07</span></td><td class="pill">18h</td><td>Prova</td><td>Antes e depois do patamar de escada, 2 fotos</td><td><span class="ok">Publicado</span></td></tr>
+          <tr><td><span class="d">Qua 29/07</span></td><td class="pill">7h</td><td>Processo</td><td>Carrossel de processo: screed, reparo e acabamento, 3 cards</td><td><span class="ok">Publicado</span></td></tr>
+          <tr><td><span class="d">Qui 30/07</span></td><td class="pill">7h</td><td>Escala</td><td>Carrossel de escala: altura e pavimento inteiro, 2 cards</td><td><span class="ok">Publicado</span></td></tr>
         </tbody>
       </table>
+    </div>
+    <div class="sec-head reveal" style="margin-top:34px">
+      <p>Dois posts mudaram de formato no meio do caminho, e vale registrar por quê. O de 29/07 era
+        para ser um reel de processo com vídeo de obra; como o vídeo não chegou a tempo, virou carrossel
+        montado com fotos reais do acervo, sem perder a data. O de 30/07 seria uma obra de grande porte
+        com as fotos de trabalho em altura; foi montado com o que já havia, e essas fotos ficam como
+        material de agosto. A cadência de três por semana não foi interrompida em nenhuma semana.</p>
     </div>
     <div class="cta-row reveal">
       <a class="btn" href="https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/roteiros-julho2026.html">Ver os roteiros completos de cada post &rarr;</a>
@@ -432,11 +448,14 @@
 <section class="close">
   <div class="wrap">
     <p class="eyebrow reveal">O próximo passo</p>
-    <h2 class="reveal">Os roteiros de cada post já estão prontos.</h2>
-    <p class="reveal">O que gravar em cada job, a legenda pronta para colar e as hashtags,
-      tudo já escrito na voz australiana e revisado. É só validar esta linha e seguir para lá.</p>
+    <h2 class="reveal">Julho fechou completo. Agosto começa com estoque.</h2>
+    <p class="reveal">Os sete posts foram ao ar sem precisar de captação nova, o que provou que o
+      acervo das obras sustenta a operação. Para agosto já existe material mapeado: o refazer dos dois
+      posts antigos do perfil na identidade nova, a sequência de etapas do reparo de coluna, o reel de
+      processo quando o vídeo chegar, e as fotos de trabalho em altura. O relatório de performance do
+      mês, com Google Ads e Meta juntos, entra na primeira semana.</p>
     <div class="cta-row reveal">
-      <a class="btn" href="https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/roteiros-julho2026.html">Ver os roteiros de gravação &rarr;</a>
+      <a class="btn" href="https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/roteiros-julho2026.html">Ver os roteiros de cada post &rarr;</a>
     </div>
     <div class="foot reveal">
       <span>Concebido por <b>Fabricio Kaempf</b> &middot; Estrategista Digital</span>

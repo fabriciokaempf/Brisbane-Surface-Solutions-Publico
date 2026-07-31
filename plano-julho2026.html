@@ -10,6 +10,7 @@
     --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
     --you-bg:#fff3e6; --you-tx:#b9560a; --you-bd:#f6d4ad;
     --us-bg:#eef1fb; --us-tx:#3946a8; --us-bd:#ccd3f2;
+    --ok-bg:#e9f6ee; --ok-tx:#0f7a44; --ok-bd:#bfe6cd;
     --maxw:920px;
     --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
@@ -22,6 +23,7 @@
       --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
       --you-bg:rgba(185,86,10,.16); --you-tx:#ffb46b; --you-bd:rgba(255,180,107,.35);
       --us-bg:rgba(57,70,168,.20); --us-tx:#a8b2f2; --us-bd:rgba(168,178,242,.35);
+    --ok-bg:rgba(15,122,68,.16); --ok-tx:#5fd695; --ok-bd:rgba(95,214,149,.35);
     }
   }
   :root[data-theme="dark"]{
@@ -31,6 +33,7 @@
     --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
     --you-bg:rgba(185,86,10,.16); --you-tx:#ffb46b; --you-bd:rgba(255,180,107,.35);
     --us-bg:rgba(57,70,168,.20); --us-tx:#a8b2f2; --us-bd:rgba(168,178,242,.35);
+    --ok-bg:rgba(15,122,68,.16); --ok-tx:#5fd695; --ok-bd:rgba(95,214,149,.35);
   }
   :root[data-theme="light"]{
     --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
@@ -39,6 +42,7 @@
     --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
     --you-bg:#fff3e6; --you-tx:#b9560a; --you-bd:#f6d4ad;
     --us-bg:#eef1fb; --us-tx:#3946a8; --us-bd:#ccd3f2;
+    --ok-bg:#e9f6ee; --ok-tx:#0f7a44; --ok-bd:#bfe6cd;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-sans);
@@ -87,6 +91,7 @@
     border:1px solid;white-space:nowrap;display:inline-block}
   .tag.you{background:var(--you-bg);color:var(--you-tx);border-color:var(--you-bd)}
   .tag.us{background:var(--us-bg);color:var(--us-tx);border-color:var(--us-bd)}
+  .tag.ok{background:var(--ok-bg);color:var(--ok-tx);border-color:var(--ok-bd)}
 
   .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--orange);
     border-radius:0 12px 12px 0;padding:16px 20px;box-shadow:var(--shadow);font-size:15px;color:var(--ink-soft)}
@@ -145,23 +150,24 @@
     <section>
       <div class="sec-head">
         <p class="eyebrow">O calendário</p>
-        <h2>Os 7 posts do mês</h2>
-        <p>Três posts por semana, terça, quarta e quinta. A etiqueta mostra de quem
-          é a imagem: laranja é foto ou vídeo seu, azul é arte que a gente cria aqui.</p>
+        <h2>Os 7 posts do mês, todos publicados</h2>
+        <p>Três posts por semana, terça, quarta e quinta, sem falhar nenhuma semana.
+          O plano previa que várias imagens viriam de ti, mas na prática o acervo das tuas obras
+          cobriu o mês inteiro: <b>nenhum post exigiu captação nova</b>.</p>
       </div>
       <div class="tablewrap">
         <table>
           <thead>
-            <tr><th>Data</th><th>Hora</th><th>Tema</th><th>Formato</th><th>Imagem</th></tr>
+            <tr><th>Data</th><th>Hora</th><th>Tema</th><th>Formato</th><th>Status</th></tr>
           </thead>
           <tbody>
-            <tr><td><span class="d">Sex 17/07</span></td><td><span class="h">18h</span></td><td>Estreia: sílica e segurança</td><td>Carrossel</td><td><span class="tag us">Arte nossa</span></td></tr>
-            <tr><td><span class="d">Ter 21/07</span></td><td><span class="h">7h</span></td><td>Educação (por que pisos falham)</td><td>Carrossel</td><td><span class="tag us">Arte nossa</span></td></tr>
-            <tr><td><span class="d">Qua 22/07</span></td><td><span class="h">18h</span></td><td>Antes e depois (nivelamento)</td><td>Before/after</td><td><span class="tag you">Foto sua</span></td></tr>
-            <tr><td><span class="d">Qui 23/07</span></td><td><span class="h">7h</span></td><td>Apresentação da empresa (sem rosto)</td><td>Foto ou reel</td><td><span class="tag you">Foto sua</span></td></tr>
-            <tr><td><span class="d">Ter 28/07</span></td><td><span class="h">18h</span></td><td>Antes e depois (resurface de patamar de escada)</td><td>Before/after</td><td><span class="tag you">Foto sua</span></td></tr>
-            <tr><td><span class="d">Qua 29/07</span></td><td><span class="h">7h</span></td><td>O processo</td><td>Carrossel</td><td><span class="tag you">Foto sua</span></td></tr>
-            <tr><td><span class="d">Qui 30/07</span></td><td><span class="h">7h</span></td><td>Obra de porte</td><td>Carrossel</td><td><span class="tag you">Foto sua</span></td></tr>
+            <tr><td><span class="d">Sex 17/07</span></td><td><span class="h">18h</span></td><td>Estreia: sílica e segurança</td><td>Carrossel, 6 slides</td><td><span class="tag ok">Publicado</span></td></tr>
+            <tr><td><span class="d">Ter 21/07</span></td><td><span class="h">7h</span></td><td>Educação (por que pisos falham)</td><td>Carrossel, 5 slides</td><td><span class="tag ok">Publicado</span></td></tr>
+            <tr><td><span class="d">Qua 22/07</span></td><td><span class="h">18h</span></td><td>Antes e depois (rampa de garagem)</td><td>Before/after</td><td><span class="tag ok">Publicado</span></td></tr>
+            <tr><td><span class="d">Qui 23/07</span></td><td><span class="h">7h</span></td><td>Apresentação da empresa (sem rosto)</td><td>Foto única</td><td><span class="tag ok">Publicado</span></td></tr>
+            <tr><td><span class="d">Ter 28/07</span></td><td><span class="h">18h</span></td><td>Antes e depois (patamar de escada)</td><td>Before/after</td><td><span class="tag ok">Publicado</span></td></tr>
+            <tr><td><span class="d">Qua 29/07</span></td><td><span class="h">7h</span></td><td>O processo (screed, reparo, acabamento)</td><td>Carrossel, 3 cards</td><td><span class="tag ok">Publicado</span></td></tr>
+            <tr><td><span class="d">Qui 30/07</span></td><td><span class="h">7h</span></td><td>Obra de porte (altura e pavimento)</td><td>Carrossel, 2 cards</td><td><span class="tag ok">Publicado</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -170,33 +176,32 @@
     <section>
       <div class="sec-head">
         <p class="eyebrow">Status da mídia</p>
-        <h2>A mídia de julho já está resolvida</h2>
-        <p>Garimpei o arquivo das tuas obras (289 fotos) e já curei as melhores para
-          cada post do mês. Nivelamento, apresentação, resurface de escada, processo e
-          obra de porte: todos com imagem definida. Não preciso que tu captures nada de
-          novo para fechar julho.</p>
+        <h2>O acervo sustentou o mês inteiro</h2>
+        <p>Garimpei o arquivo das tuas obras (289 fotos) e curei as melhores para cada post.
+          No fim, os sete saíram dali: nivelamento, apresentação, resurface de escada, processo e
+          obra de porte. <b>Tu não precisou parar para fotografar nada.</b> Isso importa porque
+          mostra que dá para manter três posts por semana sem tomar teu tempo na obra.</p>
       </div>
 
       <article class="shot">
         <div class="n">+</div>
         <div>
           <div class="head">
-            <h3>Só se der: um vídeo curto do processo</h3>
-            <span class="for">reel de processo em agosto (opcional)</span>
+            <h3>O que ainda agrega, quando der</h3>
+            <span class="for">material para agosto (sem pressa)</span>
           </div>
           <ul>
-            <li>15 a 30 segundos, no celular mesmo.</li>
-            <li>A grinder trabalhando de perto, com a mangueira da extração conectada e sem nuvem de poeira no ar.</li>
-            <li>Pode deixar o som original da máquina, sem música por cima.</li>
-            <li>O post de 29/07 vai ao ar como carrossel com fotos do arquivo; o vídeo, quando vier, vira um reel de processo em agosto.</li>
+            <li>Um vídeo curto do processo, 15 a 30 segundos, no celular mesmo: a grinder trabalhando de perto, com a mangueira da extração conectada e sem nuvem de poeira no ar. Pode deixar o som original da máquina.</li>
+            <li>As fotos de trabalho em altura (rope access) que tu comentou. Elas viram um post de escala mais forte do que o que usamos em 30/07.</li>
+            <li>Fotos de obra comercial de maior porte, se pintar alguma. É o tipo de imagem que fala direto com construtora.</li>
           </ul>
         </div>
       </article>
 
       <div class="callout">
-        <b>Resumo:</b> julho está coberto, sem pressa nenhuma. O único extra que ainda
-        agrega é aquele vídeo de 15 a 30 segundos do processo para um reel em agosto,
-        e mesmo esse é opcional. Se quiseres trocar alguma foto, é só me chamar que ajusto na hora.
+        <b>Resumo:</b> julho fechou 7 de 7, sem depender de captação tua. Para agosto já existe
+        estoque mapeado, então nada aqui é urgente. Se quiseres trocar alguma foto ou tirar algum
+        post do ar, é só me chamar que ajusto na hora.
       </div>
     </section>
 
