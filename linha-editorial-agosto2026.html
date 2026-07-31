@@ -1,0 +1,360 @@
+<title>Linha Editorial Agosto | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --navy-2:#17213d; --navy-3:#1b2748;
+    --orange:#ff6a2c; --red:#ff1a44; --blue:#2f7fc4; --blue-on-dark:#56b5ff;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --maxw:1080px; --prose:60ch;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+  }
+  :root[data-theme="light"]{
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8; --blue:#2f7fc4;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--f-sans);line-height:1.65;-webkit-font-smoothing:antialiased;
+    font-size:17px;transition:background .4s ease,color .4s ease}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--orange);font-weight:600;margin:0 0 14px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.08;margin:0}
+  p{margin:0 0 1em}
+  a{color:inherit}
+  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;width:40px;height:40px;
+    border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(15,29,58,.55);
+    color:#fff;cursor:pointer;font-size:16px;display:grid;place-items:center;
+    backdrop-filter:blur(6px);transition:transform .2s ease}
+  .theme-btn:hover{transform:scale(1.08)}
+  .theme-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+  /* HERO */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;
+    padding:96px 0 84px}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 82% -10%,var(--glow),transparent 55%),
+      radial-gradient(90% 80% at 8% 115%,rgba(47,53,111,.5),transparent 60%);
+    pointer-events:none}
+  .hero .wrap{position:relative}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:56px}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12.5px;
+    letter-spacing:.26em;text-transform:uppercase;color:#fff}
+  .brandmark b{color:var(--orange)}
+  .brandline .tag{margin-left:auto;font-size:12.5px;color:rgba(255,255,255,.62);
+    letter-spacing:.02em}
+  .hero .eyebrow{color:var(--orange)}
+  .hero h1{font-size:clamp(38px,6.4vw,74px);font-weight:800;color:#fff;
+    max-width:15ch}
+  .hero h1 .u{color:var(--orange)}
+  .hero .lead{margin-top:26px;max-width:46ch;font-size:clamp(17px,2.1vw,20px);
+    color:rgba(255,255,255,.80);line-height:1.6}
+  .hero .meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;
+    padding:7px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.22);
+    color:rgba(255,255,255,.9);background:rgba(255,255,255,.05)}
+  .chip.b2b{border-color:var(--orange);color:#ffd0b8;background:rgba(255,106,44,.14)}
+
+  /* SECTIONS */
+  section{padding:76px 0}
+  .sec-head{max-width:var(--prose);margin-bottom:40px}
+  .sec-head h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;color:var(--ink)}
+  .sec-head p{margin-top:14px;color:var(--ink-soft);font-size:18px}
+  .prose{max-width:var(--prose)}
+  .prose p{color:var(--ink-soft)}
+  .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.5;color:var(--ink);font-weight:400}
+  .lede .u{color:var(--orange);font-weight:600}
+  .bridge{margin-top:22px;padding:16px 20px;border-left:3px solid var(--orange);
+    background:var(--surface);border-radius:0 10px 10px 0;font-family:var(--f-mono);
+    font-size:14.5px;color:var(--ink);box-shadow:var(--shadow)}
+
+  .alt{background:var(--surface)}
+  .note{font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);
+    padding-top:16px;margin-top:8px;max-width:var(--prose)}
+
+  /* AUDIENCE */
+  .aud{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+  .aud span{padding:9px 15px;border-radius:999px;background:var(--card);
+    border:1px solid var(--line);font-size:14.5px;font-weight:500;color:var(--ink);
+    box-shadow:var(--shadow)}
+
+  /* PILLARS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    transition:transform .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 34px rgba(15,29,58,.14)}
+  .card .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .card .no{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--muted)}
+  .card .mix{font-family:var(--f-mono);font-weight:700;font-size:22px;
+    font-variant-numeric:tabular-nums;color:var(--accent,var(--orange))}
+  .card h3{margin-top:12px;font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .card p{margin:10px 0 16px;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+  .card .bar{height:5px;border-radius:999px;background:var(--line);overflow:hidden}
+  .card .bar i{display:block;height:100%;border-radius:999px;background:var(--accent,var(--orange));
+    width:var(--w,20%)}
+  .card.o{--accent:var(--orange)} .card.b{--accent:var(--blue)} .card.r{--accent:var(--red)}
+
+  /* VOCAB */
+  .voc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--card)}
+  .voc .h{padding:14px 18px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;font-weight:600}
+  .voc .h.use{background:rgba(255,106,44,.12);color:var(--orange)}
+  .voc .h.no{background:var(--surface);color:var(--muted)}
+  .voc .r{padding:13px 18px;border-top:1px solid var(--line);font-size:14.5px}
+  .voc .r.use{color:var(--ink)}
+  .voc .r.no{color:var(--muted);border-left:1px solid var(--line)}
+  .hooks{margin-top:20px;display:grid;gap:10px}
+  .hooks li{list-style:none;padding-left:26px;position:relative;color:var(--ink-soft);
+    font-size:15px;line-height:1.5}
+  .hooks li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;
+    border-radius:2px;background:var(--orange)}
+  .hooks ul{margin:0;padding:0}
+
+  /* VOICE */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .vbox{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;box-shadow:var(--shadow)}
+  .vbox h4{margin:0 0 14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase}
+  .vbox.do h4{color:var(--orange)} .vbox.dont h4{color:var(--red)}
+  .vbox ul{margin:0;padding:0;display:grid;gap:11px}
+  .vbox li{list-style:none;font-size:14.5px;color:var(--ink-soft);line-height:1.5;
+    padding-left:22px;position:relative}
+  .vbox.do li::before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:700}
+  .vbox.dont li::before{content:"\2715";position:absolute;left:0;color:var(--red);font-weight:700}
+
+  /* OPS */
+  .ops{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .op{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;
+    box-shadow:var(--shadow)}
+  .op .k{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:10px}
+  .op .v{font-size:15px;color:var(--ink);line-height:1.5}
+  .op .v b{color:var(--ink);font-weight:700}
+  .op .big{font-size:30px;font-weight:800;color:var(--orange);letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+  .tags span{font-family:var(--f-mono);font-size:12px;color:var(--blue);
+    background:rgba(47,127,196,.10);padding:4px 9px;border-radius:6px}
+
+  /* CALENDAR */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:520px}
+  th,td{text-align:left;padding:14px 18px;font-size:14.5px;border-bottom:1px solid var(--line)}
+  thead th{background:var(--navy);color:#fff;font-family:var(--f-mono);font-size:11.5px;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  td .d{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  td .pill{font-family:var(--f-mono);font-size:12px;color:var(--ink-soft)}
+  td:last-child{color:var(--ink-soft)}
+  td .ok{display:inline-block;font-family:var(--f-mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;color:var(--green);background:var(--green-bg);
+    padding:4px 10px;border-radius:999px;white-space:nowrap}
+
+  /* CLOSE */
+  .close{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .close::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(90% 120% at 90% 120%,var(--glow),transparent 55%);pointer-events:none}
+  .close .wrap{position:relative}
+  .close .eyebrow{color:var(--orange)}
+  .close h2{color:#fff;font-size:clamp(24px,3.4vw,34px);font-weight:800;max-width:20ch}
+  .close p{color:rgba(255,255,255,.78);max-width:52ch;margin-top:16px}
+  .foot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+    font-size:13px;color:rgba(255,255,255,.6)}
+  .foot b{color:#fff;font-weight:600}
+  .foot .r{margin-left:auto;font-family:var(--f-mono);letter-spacing:.06em}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;
+    font-weight:700;font-size:15px;text-decoration:none;background:var(--orange);color:var(--navy);
+    box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,106,44,.35)}
+  .btn:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+  .cta-row{margin-top:24px}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:640px){
+    .voc{grid-template-columns:1fr} .cols{grid-template-columns:1fr}
+    .voc .r.no{border-left:none} section{padding:56px 0} .hero{padding:72px 0 64px}
+    .brandline{margin-bottom:40px} .brandline .tag{display:none}
+  }
+</style>
+
+<style>
+  td .ok{display:inline-block;font-family:var(--f-mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;color:var(--green);background:var(--green-bg);
+    padding:4px 10px;border-radius:999px;white-space:nowrap}
+  td .wait{display:inline-block;font-family:var(--f-mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;color:var(--orange);background:rgba(255,106,44,.13);
+    padding:4px 10px;border-radius:999px;white-space:nowrap}
+</style>
+
+<button class="theme-btn" id="themeBtn" aria-label="Alternar tema claro e escuro">◐</button>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="brandmark">BRISBANE <b>SURFACE</b> SOLUTIONS</span>
+      <span class="tag">Brisbane's Trusted Surface Experts</span>
+    </div>
+    <p class="eyebrow">Linha Editorial &middot; Agosto 2026</p>
+    <h1>Sorted <span class="u">before the storms</span>.</h1>
+    <p class="lead">Julho apresentou a marca e provou o padrão. Agosto tem uma coisa que julho
+      não tinha: prazo. A temporada de tempestades de Queensland começa em novembro, e agosto é
+      o último mês inteiro de tempo seco confiável para resolver concreto. A linha do mês
+      transforma isso em urgência legítima: cada post aponta para a mesma ação, resolver agora,
+      na janela seca.</p>
+    <div class="meta">
+      <span class="chip b2b">Foco B2B &middot; builders e gestores prediais</span>
+      <span class="chip">3 posts / semana</span>
+      <span class="chip">12 posts &middot; 04 a 27/08</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow reveal">Por que agosto tem pressa</p>
+    <div class="prose reveal">
+      <p class="lede">Três movimentos reais do mercado de Queensland dão o tom do mês.
+        Nenhum é invenção de marketing: os três têm data e consequência.</p>
+      <p style="margin-top:20px"><b>1. A janela seca fecha.</b> A storm season vai de novembro a
+        março, e a orientação padrão do mercado é preparar o imóvel em agosto e setembro. Trabalho
+        de concreto externo precisa de tempo seco para aplicar e curar. Quem não resolver agora
+        disputa agenda em outubro ou espera até abril. E é a água da chuva que alimenta o concrete
+        cancer: a chuva de dezembro cobra o que agosto ignorou. Esse é o argumento para strata,
+        property e facility managers.</p>
+      <p><b>2. A nova regra de sílica vira lei em 1º de dezembro.</b> Em agosto faltam exatos
+        quatro meses. O limite de exposição não muda, mas o enquadramento legal e a fiscalização
+        mudam, e obra de alto risco vai exigir plano escrito de controle de sílica. A BSS já roda
+        extração H-class em todo job: o conteúdo não vende medo, mostra que a empresa já está
+        onde a lei vai chegar. Esse é o argumento para builders e PCBUs.</p>
+      <p><b>3. O mercado de subempreiteiros está espremido.</b> Brisbane tem a maior escalada de
+        custo de construção do país prevista para 2026 e falta de mão de obra com pico em 2026-27.
+        Nesse cenário, retrabalho é o trade mais caro da obra, e um parceiro de preparação que
+        entrega no padrão e no prazo vale ouro. Esse é o argumento de confiança.</p>
+      <div class="bridge">Book the dry window. Get it sorted before the storms.</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O calendário</p>
+      <h2>Os 12 posts de agosto</h2>
+      <p>Terça, quarta e quinta, como em julho. E a mesma garantia: <b>todo post tem plano
+        garantido com o acervo existente</b>. Teu vídeo e tuas fotos novas, quando vierem,
+        melhoram dois posts, mas nenhum post depende deles para sair.</p>
+    </div>
+    <div class="tablewrap reveal">
+      <table>
+        <thead><tr><th>Data</th><th>Hora</th><th>Pilar</th><th>Post</th><th>Mídia</th></tr></thead>
+        <tbody>
+          <tr><td><span class="d">Ter 04/08</span></td><td class="pill">18h</td><td>Educação</td><td>Abertura do mês: "Storm season starts in November. Your concrete's deadline is earlier."</td><td><span class="ok">Arte nossa</span></td></tr>
+          <tr><td><span class="d">Qua 05/08</span></td><td class="pill">7h</td><td>Sílica</td><td>Contagem regressiva: faltam 4 meses para a nova regra de sílica</td><td><span class="ok">Arte nossa</span></td></tr>
+          <tr><td><span class="d">Qui 06/08</span></td><td class="pill">7h</td><td>Prova</td><td>Antes e depois antigo do perfil, refeito na identidade nova (1 de 2)</td><td><span class="ok">Arte pronta</span></td></tr>
+          <tr><td><span class="d">Ter 11/08</span></td><td class="pill">18h</td><td>Prova</td><td>Concrete cancer do pilar: antes, durante e depois. "Water did this."</td><td><span class="ok">Acervo</span></td></tr>
+          <tr><td><span class="d">Qua 12/08</span></td><td class="pill">7h</td><td>Educação</td><td>Honeycombing: o que está por baixo da superfície</td><td><span class="ok">Acervo</span></td></tr>
+          <tr><td><span class="d">Qui 13/08</span></td><td class="pill">7h</td><td>Processo</td><td>Reel de processo com o teu vídeo; sem vídeo, carrossel de wet areas</td><td><span class="wait">Teu vídeo</span></td></tr>
+          <tr><td><span class="d">Ter 18/08</span></td><td class="pill">18h</td><td>Prova</td><td>Antes e depois antigo do perfil, refeito na identidade nova (2 de 2)</td><td><span class="ok">Arte pronta</span></td></tr>
+          <tr><td><span class="d">Qua 19/08</span></td><td class="pill">7h</td><td>Escala</td><td>Trabalho em altura com as tuas fotos de rope access; plano B no acervo</td><td><span class="wait">Tuas fotos</span></td></tr>
+          <tr><td><span class="d">Qui 20/08</span></td><td class="pill">7h</td><td>Confiança</td><td>"Rework is the most expensive trade on site." Mesmo padrão, mesma equipe, no prazo</td><td><span class="ok">Arte + acervo</span></td></tr>
+          <tr><td><span class="d">Ter 25/08</span></td><td class="pill">18h</td><td>Prova</td><td>Antes e depois de wet area ou garagem (o que a semana 2 não usar)</td><td><span class="ok">Acervo</span></td></tr>
+          <tr><td><span class="d">Qua 26/08</span></td><td class="pill">7h</td><td>Sílica</td><td>O plano escrito de controle de sílica na prática: o que muda para o PCBU</td><td><span class="ok">Arte nossa</span></td></tr>
+          <tr><td><span class="d">Qui 27/08</span></td><td class="pill">7h</td><td>Prova</td><td>Fechamento: colunas recuperadas sob céu azul. "Book the dry window."</td><td><span class="ok">Acervo</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Mix do mês: prova puxa a frente (5 posts), educação sustenta (2),
+      sílica ganha peso pela contagem regressiva (2), e processo, escala e confiança fecham.
+      Julho já fez a apresentação; agosto empurra prova e urgência.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O que ajuda, sem travar nada</p>
+      <h2>Três coisas tuas que deixam o mês mais forte</h2>
+    </div>
+    <div class="prose reveal">
+      <p><b>1. O vídeo de processo</b>, 15 a 30 segundos no celular: a grinder trabalhando de
+        perto, mangueira da extração conectada, sem nuvem de poeira. Som original da máquina.
+        Vira o reel de 13/08.</p>
+      <p><b>2. As fotos de trabalho em altura</b> (rope access) que tu comentou. Viram o post de
+        escala de 19/08, bem mais forte que o plano B.</p>
+      <p><b>3. Aquela confirmação das regiões</b> que te mandei no grupo (e a do roof). Com ela
+        eu ajusto o anúncio do Google e atualizo a bio do Instagram, que ainda está com o texto
+        da gestão antiga.</p>
+      <p style="margin-top:18px">Se nada disso vier a tempo, agosto sai completo do mesmo jeito,
+        como julho saiu: o acervo cobre os 12 posts.</p>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow reveal">O próximo passo</p>
+    <h2 class="reveal">Valida esta linha e eu escrevo os roteiros.</h2>
+    <p class="reveal">Como em julho: tu bate o olho, me diz o que muda, e eu transformo cada
+      post em roteiro com legenda pronta e hashtags, tudo na voz australiana. O primeiro post
+      vai ao ar terça, 4 de agosto.</p>
+    <div class="cta-row reveal">
+      <a class="btn" href="https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial.html">Ver a linha editorial base &rarr;</a>
+    </div>
+    <div class="foot reveal">
+      <span>Concebido por <b>Fabricio Kaempf</b> &middot; Estrategista Digital</span>
+      <span class="r">@fabriciokaempf</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var btn=document.getElementById('themeBtn');
+    function sysDark(){return window.matchMedia('(prefers-color-scheme:dark)').matches;}
+    function cur(){var t=document.documentElement.getAttribute('data-theme');return t?t:(sysDark()?'dark':'light');}
+    btn.addEventListener('click',function(){
+      var next=cur()==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next);
+    });
+    var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els=document.querySelectorAll('.reveal');
+    if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
