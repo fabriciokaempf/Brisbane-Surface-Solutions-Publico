@@ -1,0 +1,426 @@
+<title>Dashboard Google Ads Julho 2026 | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --navy-2:#17213d; --navy-3:#1b2748;
+    --orange:#ff6a2c; --red:#ff1a44; --blue:#2f7fc4; --blue-on-dark:#56b5ff;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --maxw:1080px; --prose:60ch;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --blue:#56b5ff; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+  }
+  :root[data-theme="light"]{
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8; --blue:#2f7fc4;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--f-sans);line-height:1.65;-webkit-font-smoothing:antialiased;
+    font-size:17px;transition:background .4s ease,color .4s ease}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--orange);font-weight:600;margin:0 0 14px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.08;margin:0}
+  p{margin:0 0 1em}
+  a{color:inherit}
+  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;width:40px;height:40px;
+    border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(15,29,58,.55);
+    color:#fff;cursor:pointer;font-size:16px;display:grid;place-items:center;
+    backdrop-filter:blur(6px);transition:transform .2s ease}
+  .theme-btn:hover{transform:scale(1.08)}
+  .theme-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+  /* HERO */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;
+    padding:96px 0 84px}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 82% -10%,var(--glow),transparent 55%),
+      radial-gradient(90% 80% at 8% 115%,rgba(47,53,111,.5),transparent 60%);
+    pointer-events:none}
+  .hero .wrap{position:relative}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:56px}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12.5px;
+    letter-spacing:.26em;text-transform:uppercase;color:#fff}
+  .brandmark b{color:var(--orange)}
+  .brandline .tag{margin-left:auto;font-size:12.5px;color:rgba(255,255,255,.62);
+    letter-spacing:.02em}
+  .hero .eyebrow{color:var(--orange)}
+  .hero h1{font-size:clamp(38px,6.4vw,74px);font-weight:800;color:#fff;
+    max-width:15ch}
+  .hero h1 .u{color:var(--orange)}
+  .hero .lead{margin-top:26px;max-width:46ch;font-size:clamp(17px,2.1vw,20px);
+    color:rgba(255,255,255,.80);line-height:1.6}
+  .hero .meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;
+    padding:7px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.22);
+    color:rgba(255,255,255,.9);background:rgba(255,255,255,.05)}
+  .chip.b2b{border-color:var(--orange);color:#ffd0b8;background:rgba(255,106,44,.14)}
+
+  /* SECTIONS */
+  section{padding:76px 0}
+  .sec-head{max-width:var(--prose);margin-bottom:40px}
+  .sec-head h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;color:var(--ink)}
+  .sec-head p{margin-top:14px;color:var(--ink-soft);font-size:18px}
+  .prose{max-width:var(--prose)}
+  .prose p{color:var(--ink-soft)}
+  .lede{font-size:clamp(19px,2.4vw,23px);line-height:1.5;color:var(--ink);font-weight:400}
+  .lede .u{color:var(--orange);font-weight:600}
+  .bridge{margin-top:22px;padding:16px 20px;border-left:3px solid var(--orange);
+    background:var(--surface);border-radius:0 10px 10px 0;font-family:var(--f-mono);
+    font-size:14.5px;color:var(--ink);box-shadow:var(--shadow)}
+
+  .alt{background:var(--surface)}
+  .note{font-size:14.5px;color:var(--muted);border-top:1px solid var(--line);
+    padding-top:16px;margin-top:8px;max-width:var(--prose)}
+
+  /* AUDIENCE */
+  .aud{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+  .aud span{padding:9px 15px;border-radius:999px;background:var(--card);
+    border:1px solid var(--line);font-size:14.5px;font-weight:500;color:var(--ink);
+    box-shadow:var(--shadow)}
+
+  /* PILLARS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    transition:transform .25s ease,box-shadow .25s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 34px rgba(15,29,58,.14)}
+  .card .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .card .no{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--muted)}
+  .card .mix{font-family:var(--f-mono);font-weight:700;font-size:22px;
+    font-variant-numeric:tabular-nums;color:var(--accent,var(--orange))}
+  .card h3{margin-top:12px;font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+  .card p{margin:10px 0 16px;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+  .card .bar{height:5px;border-radius:999px;background:var(--line);overflow:hidden}
+  .card .bar i{display:block;height:100%;border-radius:999px;background:var(--accent,var(--orange));
+    width:var(--w,20%)}
+  .card.o{--accent:var(--orange)} .card.b{--accent:var(--blue)} .card.r{--accent:var(--red)}
+
+  /* VOCAB */
+  .voc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--card)}
+  .voc .h{padding:14px 18px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;font-weight:600}
+  .voc .h.use{background:rgba(255,106,44,.12);color:var(--orange)}
+  .voc .h.no{background:var(--surface);color:var(--muted)}
+  .voc .r{padding:13px 18px;border-top:1px solid var(--line);font-size:14.5px}
+  .voc .r.use{color:var(--ink)}
+  .voc .r.no{color:var(--muted);border-left:1px solid var(--line)}
+  .hooks{margin-top:20px;display:grid;gap:10px}
+  .hooks li{list-style:none;padding-left:26px;position:relative;color:var(--ink-soft);
+    font-size:15px;line-height:1.5}
+  .hooks li::before{content:"";position:absolute;left:0;top:9px;width:10px;height:10px;
+    border-radius:2px;background:var(--orange)}
+  .hooks ul{margin:0;padding:0}
+
+  /* VOICE */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .vbox{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;box-shadow:var(--shadow)}
+  .vbox h4{margin:0 0 14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase}
+  .vbox.do h4{color:var(--orange)} .vbox.dont h4{color:var(--red)}
+  .vbox ul{margin:0;padding:0;display:grid;gap:11px}
+  .vbox li{list-style:none;font-size:14.5px;color:var(--ink-soft);line-height:1.5;
+    padding-left:22px;position:relative}
+  .vbox.do li::before{content:"\2713";position:absolute;left:0;color:var(--orange);font-weight:700}
+  .vbox.dont li::before{content:"\2715";position:absolute;left:0;color:var(--red);font-weight:700}
+
+  /* OPS */
+  .ops{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .op{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;
+    box-shadow:var(--shadow)}
+  .op .k{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:10px}
+  .op .v{font-size:15px;color:var(--ink);line-height:1.5}
+  .op .v b{color:var(--ink);font-weight:700}
+  .op .big{font-size:30px;font-weight:800;color:var(--orange);letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+  .tags span{font-family:var(--f-mono);font-size:12px;color:var(--blue);
+    background:rgba(47,127,196,.10);padding:4px 9px;border-radius:6px}
+
+  /* CALENDAR */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:520px}
+  th,td{text-align:left;padding:14px 18px;font-size:14.5px;border-bottom:1px solid var(--line)}
+  thead th{background:var(--navy);color:#fff;font-family:var(--f-mono);font-size:11.5px;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  td .d{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  td .pill{font-family:var(--f-mono);font-size:12px;color:var(--ink-soft)}
+  td:last-child{color:var(--ink-soft)}
+  td .ok{display:inline-block;font-family:var(--f-mono);font-size:11.5px;font-weight:700;
+    letter-spacing:.04em;color:var(--green);background:var(--green-bg);
+    padding:4px 10px;border-radius:999px;white-space:nowrap}
+
+  /* CLOSE */
+  .close{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .close::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(90% 120% at 90% 120%,var(--glow),transparent 55%);pointer-events:none}
+  .close .wrap{position:relative}
+  .close .eyebrow{color:var(--orange)}
+  .close h2{color:#fff;font-size:clamp(24px,3.4vw,34px);font-weight:800;max-width:20ch}
+  .close p{color:rgba(255,255,255,.78);max-width:52ch;margin-top:16px}
+  .foot{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+    font-size:13px;color:rgba(255,255,255,.6)}
+  .foot b{color:#fff;font-weight:600}
+  .foot .r{margin-left:auto;font-family:var(--f-mono);letter-spacing:.06em}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;
+    font-weight:700;font-size:15px;text-decoration:none;background:var(--orange);color:var(--navy);
+    box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,106,44,.35)}
+  .btn:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+  .cta-row{margin-top:24px}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media (max-width:640px){
+    .voc{grid-template-columns:1fr} .cols{grid-template-columns:1fr}
+    .voc .r.no{border-left:none} section{padding:56px 0} .hero{padding:72px 0 64px}
+    .brandline{margin-bottom:40px} .brandline .tag{display:none}
+  }
+</style>
+
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-bottom:26px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow);padding:20px 22px}
+  .kpi .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 10px}
+  .kpi .v{font-family:var(--f-sans);font-size:clamp(28px,3.4vw,38px);font-weight:800;
+    letter-spacing:-1px;line-height:1;margin:0 0 8px;color:var(--ink)}
+  .kpi .v.green{color:var(--green)} .kpi .v.blue{color:var(--blue)} .kpi .v.orange{color:var(--orange)}
+  .kpi .s{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.4}
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--orange);
+    border-radius:0 12px 12px 0;padding:18px 22px;box-shadow:var(--shadow);
+    font-size:15px;color:var(--ink-soft);line-height:1.6}
+  .callout b{color:var(--ink)}
+  td .hl{font-family:var(--f-mono);font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:6px;
+    display:inline-block;white-space:nowrap}
+  td .hl.good{color:var(--green);background:var(--green-bg)}
+  td .hl.bad{color:var(--orange);background:rgba(255,106,44,.13)}
+  .reach{display:flex;flex-wrap:wrap;gap:26px;align-items:center;background:var(--card);
+    border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:26px 28px}
+  .reachnum{font-size:clamp(46px,7vw,74px);font-weight:800;color:var(--orange);
+    letter-spacing:-2px;line-height:1;flex:none}
+  .reachtxt{flex:1;min-width:260px;font-size:15px;color:var(--ink-soft);line-height:1.6}
+  .reachtxt b{color:var(--ink)}
+  .statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:18px}
+  .statrow div{background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;text-align:center}
+  .statrow .sv{display:block;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.5px}
+  .statrow .sl{display:block;font-family:var(--f-mono);font-size:11px;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+  @media (max-width:600px){ .reach{padding:20px} }
+</style>
+
+<button class="theme-btn" id="themeBtn" aria-label="Alternar tema claro e escuro">◐</button>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="brandmark">BRISBANE <b>SURFACE</b> SOLUTIONS</span>
+      <span class="tag">Brisbane &middot; Gold Coast &middot; Sunshine Coast</span>
+    </div>
+    <p class="eyebrow">Dashboard de Performance &middot; Google Ads</p>
+    <h1>Julho de 2026</h1>
+    <p class="lead">O que o investimento em anúncios trouxe no mês, de 1 a 31 de julho.
+      Os números vêm direto do painel do Google, sem arredondamento.</p>
+    <div class="meta">
+      <span class="chip b2b">15 pedidos de orçamento</span>
+      <span class="chip">17 cliques no telefone</span>
+      <span class="chip">A$ 66,88 por orçamento</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kpis reveal">
+      <article class="kpi">
+        <p class="k">Pedidos de orçamento</p>
+        <p class="v green">15</p>
+        <p class="s">formulários enviados pelo site</p>
+      </article>
+      <article class="kpi">
+        <p class="k">Cliques no telefone</p>
+        <p class="v blue">17</p>
+        <p class="s">intenção de ligar, não confirma a ligação</p>
+      </article>
+      <article class="kpi">
+        <p class="k">Custo por orçamento</p>
+        <p class="v orange">A$ 66,88</p>
+        <p class="s">mercado australiano: A$ 70 a 120</p>
+      </article>
+      <article class="kpi">
+        <p class="k">Investimento</p>
+        <p class="v">A$ 1.003,20</p>
+        <p class="s">no mês, A$ 33 por dia</p>
+      </article>
+    </div>
+
+    <div class="callout reveal">
+      <b>Como ler estes números.</b> O painel do Google somou 32 conversões no mês, e elas são
+      duas coisas diferentes: <b>15 pedidos de orçamento</b>, que é alguém preenchendo o formulário
+      com nome, telefone e mensagem, e <b>17 cliques no botão de telefone</b>, que mostra intenção
+      mas não confirma que a ligação aconteceu. Por isso ficam separados aqui. A partir de agosto,
+      o número principal passa a contar só os pedidos de orçamento, para a leitura ficar mais direta.
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Por dispositivo</p>
+      <h2>Computador converte quase o dobro do celular</h2>
+      <p>O celular consome mais orçamento, mas cada resultado sai bem mais caro. É um ponto
+        de ajuste para os próximos meses.</p>
+    </div>
+    <div class="tablewrap reveal">
+      <table>
+        <thead><tr><th>Dispositivo</th><th>Investimento</th><th>Cliques</th><th>Resultados</th><th>Custo por resultado</th></tr></thead>
+        <tbody>
+          <tr><td><span class="d">Computador</span></td><td>A$ 448,52</td><td>52</td><td>17</td><td><span class="hl good">A$ 26,38</span></td></tr>
+          <tr><td><span class="d">Celular</span></td><td>A$ 524,32</td><td>71</td><td>12</td><td><span class="hl bad">A$ 43,69</span></td></tr>
+          <tr><td><span class="d">Tablet</span></td><td>A$ 30,36</td><td>4</td><td>3</td><td><span class="hl good">A$ 10,12</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Resultados aqui é a soma de pedidos de orçamento e cliques no telefone,
+      que é como o Google entrega o dado por dispositivo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Alcance</p>
+      <h2>A campanha aparece em menos de um quarto das buscas</h2>
+    </div>
+    <div class="reach reveal">
+      <div class="reachnum">23,44%</div>
+      <div class="reachtxt">
+        <p>De todas as buscas em que a BSS <b>poderia</b> ter aparecido no mês, a campanha
+          apareceu em 23,44%. O que limita não é a qualidade dos anúncios, é o orçamento diário:
+          o Google marca a campanha como <b>limitada por orçamento</b>.</p>
+        <p style="margin-bottom:0">Na prática, existe demanda buscando este serviço em Brisbane
+          que o anúncio não alcança hoje.</p>
+      </div>
+    </div>
+    <div class="statrow reveal">
+      <div><span class="sv">127</span><span class="sl">cliques</span></div>
+      <div><span class="sv">1.185</span><span class="sl">impressões</span></div>
+      <div><span class="sv">10,72%</span><span class="sl">taxa de cliques</span></div>
+      <div><span class="sv">A$ 7,90</span><span class="sl">custo por clique</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O que trouxe resultado</p>
+      <h2>As buscas que viraram contato</h2>
+      <p>Termos que as pessoas digitaram no Google antes de clicar no anúncio e entrar em contato.</p>
+    </div>
+    <div class="tablewrap reveal">
+      <table>
+        <thead><tr><th>Busca</th><th>Resultados</th><th>Custo por resultado</th></tr></thead>
+        <tbody>
+          <tr><td><span class="d">concrete resurfacing brisbane</span></td><td>4</td><td><span class="hl good">A$ 18,63</span></td></tr>
+          <tr><td><span class="d">concrete floor grinding services</span></td><td>2</td><td><span class="hl good">A$ 5,84</span></td></tr>
+          <tr><td><span class="d">concrete repair steps</span></td><td>1</td><td>A$ 6,09</td></tr>
+          <tr><td><span class="d">concrete spalling repair</span></td><td>1</td><td>A$ 13,14</td></tr>
+          <tr><td><span class="d">concrete grinding brisbane</span></td><td>1</td><td>A$ 5,47</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Recuperação de superfície em Brisbane segue sendo a busca mais rentável,
+      como já tinha sido no ciclo anterior. E <b>concrete floor grinding services</b> chama atenção:
+      veio do grupo voltado a construtoras, que estava parado, e trouxe o resultado mais barato do mês.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Leitura do mês</p>
+      <h2>Conta estável, com espaço claro para crescer</h2>
+    </div>
+    <div class="prose reveal">
+      <p>Comparando com o ciclo anterior e ajustando pela diferença de dias, o investimento diário
+        ficou igual e o custo por pedido de orçamento praticamente também: era A$ 64,50, agora
+        A$ 66,88. Ou seja, a conta está previsível e entregando lead abaixo do preço de mercado.</p>
+      <p>Duas mudanças importantes entraram tarde demais para aparecer aqui, e o efeito delas vai
+        ser medido no relatório de agosto: a <b>limpeza de termos de busca</b>, aplicada em 28 de
+        julho, que corta cliques de quem procura material ou serviço fora do escopo, e a
+        <b>ampliação para Gold Coast e Sunshine Coast</b>, feita em 2 de agosto.</p>
+      <div class="bridge">O limite hoje não é a demanda. É o orçamento.</div>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <p class="eyebrow reveal">Próximo passo</p>
+    <h2 class="reveal">Agosto mede o efeito da limpeza e das duas regiões novas.</h2>
+    <p class="reveal">Com os termos filtrados e a área de atendimento ampliada, agosto é o primeiro
+      mês em que dá para ver o efeito das duas mudanças juntas. O relatório do mês que vem compara
+      lado a lado.</p>
+    <div class="foot reveal">
+      <span>Preparado por <b>Fabricio Kaempf</b> &middot; Estrategista Digital</span>
+      <span class="r">@fabriciokaempf</span>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var btn=document.getElementById('themeBtn');
+    function sysDark(){return window.matchMedia('(prefers-color-scheme:dark)').matches;}
+    function cur(){var t=document.documentElement.getAttribute('data-theme');return t?t:(sysDark()?'dark':'light');}
+    btn.addEventListener('click',function(){
+      var next=cur()==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next);
+    });
+    var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var els=document.querySelectorAll('.reveal');
+    if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
