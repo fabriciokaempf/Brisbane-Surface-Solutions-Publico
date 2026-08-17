@@ -7,6 +7,10 @@ privado de gestão).
 Cada entrega vira uma página nova neste repositório, nomeada com o mês/ano de referência.
 Publicado via GitHub Pages a partir da branch `master`.
 
+## Setembro 2026
+
+- [Linha Editorial: Instagram e Facebook (Set/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial-setembro2026.html)
+
 ## Agosto 2026
 
 - [Linha Editorial: Instagram e Facebook (Ago/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial-agosto2026.html)
