@@ -13,6 +13,7 @@ Publicado via GitHub Pages a partir da branch `master`.
 
 ## Agosto 2026
 
+- [Dashboard de Performance, Google Ads (Ago/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/dashboard-google-ads-agosto2026.html)
 - [Linha Editorial: Instagram e Facebook (Ago/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial-agosto2026.html)
 
 ## Julho 2026
