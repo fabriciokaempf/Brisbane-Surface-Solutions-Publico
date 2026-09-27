@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Site: o que foi ajustado | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --orange:#ff6a2c; --blue:#2f7fc4;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --maxw:1080px;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --blue:#56b5ff; --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --blue:#56b5ff; --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-sans);
+    line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--orange);font-weight:600;margin:0 0 14px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.1;margin:0}
+  p{margin:0 0 1em}
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:72px 0 64px}
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 90% at 82% -10%,var(--glow),transparent 55%),
+               radial-gradient(90% 80% at 8% 115%,rgba(47,53,111,.5),transparent 60%)}
+  .hero .wrap{position:relative}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:#fff;margin-bottom:44px}
+  .brandmark b{color:var(--orange)}
+  .hero h1{font-size:clamp(34px,6vw,64px);font-weight:800;color:#fff;max-width:16ch}
+  .hero .lead{margin-top:22px;max-width:52ch;font-size:clamp(17px,2.1vw,20px);color:rgba(255,255,255,.82)}
+  .chips{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;padding:7px 13px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.9);background:rgba(255,255,255,.05)}
+  section{padding:56px 0}
+  section + section{border-top:1px solid var(--line)}
+  h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;margin-bottom:18px}
+  .sub{color:var(--ink-soft);max-width:64ch}
+  .grid{display:grid;gap:18px;margin-top:28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;box-shadow:var(--shadow)}
+  .card h3{font-size:19px;font-weight:800;margin-bottom:10px}
+  .num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--orange);
+    color:#fff;font-family:var(--f-mono);font-weight:700;font-size:14px;margin-right:10px;vertical-align:middle}
+  .ab{display:grid;gap:8px;margin-top:12px;font-size:15.5px}
+  .ab div{padding:10px 14px;border-radius:10px;border:1px solid var(--line)}
+  .ab .a{background:rgba(15,29,58,.05)} .ab .d{background:var(--green-bg);border-color:transparent}
+  .ab b{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:4px;color:var(--muted)}
+  .ab .d b{color:var(--green)}
+  code{font-family:var(--f-mono);font-size:.92em;background:rgba(127,127,127,.12);padding:1px 6px;border-radius:6px}
+  figure{margin:36px 0 0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  figure img{display:block;width:100%;height:auto}
+  figcaption{padding:14px 18px;font-size:15px;color:var(--ink-soft);border-top:1px solid var(--line)}
+  .note{margin-top:28px;padding:18px 20px;border-left:4px solid var(--orange);background:var(--surface);border-radius:0 12px 12px 0;color:var(--ink-soft)}
+  .placeholder{margin-top:36px;border:2px dashed var(--line-strong);border-radius:16px;padding:40px 20px;text-align:center;color:var(--muted)}
+  footer{padding:44px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  footer b{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandmark">Brisbane <b>Surface</b> Solutions</div>
+    <p class="eyebrow">Site &middot; 27 de setembro de 2026</p>
+    <h1>O que foi ajustado no site, com o antes e o depois</h1>
+    <p class="lead">Com o acesso ao painel na mão, entrei no site no domingo e deixei feito o que estava combinado, mais dois defeitos que só apareceram por dentro. Cada mudança abaixo tem a imagem de como estava e de como ficou.</p>
+    <div class="chips">
+      <span class="chip">6 ajustes publicados</span>
+      <span class="chip">2 defeitos encontrados</span>
+      <span class="chip">brisbanesurfacesolutions.com.au</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Resumo</p>
+    <h2>Seis mudanças, em uma tarde</h2>
+    <p class="sub">Tudo foi feito no painel do próprio site, com a versão anterior guardada. Nenhuma mudança de estrutura, só o que precisava para o site dizer o que a gente anuncia.</p>
+    <div class="grid">
+      <div class="card"><h3><span class="num">1</span>O nome da empresa no título do Google</h3>
+        <p>O título da página não trazia o nome da empresa, e por isso o Google mostrava "logo brisbane surface solutions" na linha azul da busca.</p>
+        <div class="ab"><div class="a"><b>Antes</b>Expert Floor Levelling Brisbane, Floor Grinder, Patch Walls</div><div class="d"><b>Depois</b>Brisbane Surface Solutions | Floor Levelling Brisbane</div></div>
+        <p style="margin-top:12px;font-size:15px;color:var(--muted)">O Google leva alguns dias para atualizar o que exibe. Até lá o "logo" ainda pode aparecer.</p></div>
+      <div class="card"><h3><span class="num">2</span>O link de e-mail do rodapé voltou a funcionar</h3>
+        <p>O link "Contact" estava escrito errado e abria uma página inválida em vez do e-mail. Contato perdido, sem ninguém saber.</p>
+        <div class="ab"><div class="a"><b>Antes</b><code>http://contact@brisbanesurfacesolutions.com.au</code></div><div class="d"><b>Depois</b><code>mailto:contact@brisbanesurfacesolutions.com.au</code></div></div></div>
+      <div class="card"><h3><span class="num">3</span>O site passou a falar com quem a gente anuncia</h3>
+        <p>"Residential and commercial" aparecia em cinco pontos da página. Tudo o que a gente faz de anúncio e conteúdo é para builders, fit-out comercial e property managers, e agora o site diz isso.</p>
+        <div class="ab"><div class="a"><b>Antes</b>...long-lasting results for residential and commercial projects.</div><div class="d"><b>Depois</b>...long-lasting results for builders, commercial fit-outs and property managers.</div></div></div>
+      <div class="card"><h3><span class="num">4</span>As regiões apareceram, com Gold Coast e Sunshine Coast</h3>
+        <p>O menu "Service Areas" apontava para uma seção que não existia na página. Ela existia no código, mas estava invisível (defeito 5). Agora está no ar, com 21 localidades.</p></div>
+      <div class="card"><h3><span class="num">5</span>Um bloco quebrado, que escondia a seção de regiões</h3>
+        <p>O bloco "How it works" estava duplicado, e a segunda cópia tinha o código de estilo cortado no meio. Tudo que vinha depois dela virava texto invisível. Fechei o código e a seção reapareceu. É defeito de construção do site, anterior ao nosso trabalho.</p></div>
+      <div class="card"><h3><span class="num">6</span>Um título repetido, corrigido na hora</h3>
+        <p>Ao salvar, o site passou a mostrar "Brisbane Surface Solutions" em texto simples acima da capa. Ajustado no mesmo dia, antes das fotos finais.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Antes e depois</p>
+    <h2>Como estava, como ficou</h2>
+    <p class="sub">O "antes" é o site como estava em 26 de setembro. O "depois" é o site no ar em 27 de setembro.</p>
+    <figure><img src="assets/site-setembro2026/par-hero.jpg" alt="Capa do site, antes e depois" loading="lazy"><figcaption>Capa. O texto agora fala com builders, fit-out comercial e property managers.</figcaption></figure>
+    <figure><img src="assets/site-setembro2026/par-services.jpg" alt="Seção de serviços, antes e depois" loading="lazy"><figcaption>Serviços. A frase de abertura mudou e passou a citar South East Queensland.</figcaption></figure>
+    <figure><img src="assets/site-setembro2026/par-projects.jpg" alt="Seção de projetos, antes e depois" loading="lazy"><figcaption>Projetos. "Residential and commercial projects" virou "Commercial and builder projects".</figcaption></figure>
+    <figure><img src="assets/site-setembro2026/par-areas.jpg" alt="Seção de regiões: não existia antes, aparece depois" loading="lazy"><figcaption>Regiões. Antes, o menu levava a uma seção que não aparecia. Agora são 21 localidades, com Gold Coast e Sunshine Coast.</figcaption></figure>
+    <figure><img src="assets/site-setembro2026/par-faq.jpg" alt="Perguntas frequentes, antes e depois" loading="lazy"><figcaption>Perguntas frequentes. Duas respostas deixaram de falar em "residential".</figcaption></figure>
+    <div class="placeholder">Busca no Google: o "antes" com o "logo brisbane surface solutions" entra aqui. O "depois" vem quando o Google atualizar o resultado.</div>
+    <div class="note">O que ficou de fora de propósito: as 18 atualizações pendentes do WordPress (pedem cópia de segurança antes) e os depoimentos, que são fala de cliente e não se mexe sem combinar.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>Fabricio Kaempf</b> | Estrategista Digital &middot; @fabriciokaempf<br>Página de trabalho, sem indexação. Setembro de 2026.</div>
+</footer>
+
+</body>
+</html>

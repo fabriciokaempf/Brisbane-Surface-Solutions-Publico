@@ -9,6 +9,7 @@ Publicado via GitHub Pages a partir da branch `master`.
 
 ## Setembro 2026
 
+- [Site: o que foi ajustado, com antes e depois (27/Set/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/relatorio-site-setembro2026.html)
 - [Linha Editorial: Instagram e Facebook (Set/2026)](https://fabriciokaempf.github.io/Brisbane-Surface-Solutions-Publico/linha-editorial-setembro2026.html)
 
 ## Agosto 2026
