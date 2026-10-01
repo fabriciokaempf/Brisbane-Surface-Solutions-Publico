@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Handover Guide | Brisbane Surface Solutions</title>
+<style>
+  :root{
+    --navy:#0f1d3a; --orange:#ff6a2c; --blue:#2f7fc4;
+    --green:#157f47; --green-bg:rgba(21,127,71,.12);
+    --ground:#f6f5f3; --surface:#ffffff; --card:#ffffff;
+    --ink:#0f1d3a; --ink-soft:#46536b; --muted:#6b7789;
+    --line:#e4e2dc; --line-strong:#d3d0c8;
+    --glow:rgba(255,106,44,.30);
+    --shadow:0 1px 2px rgba(15,29,58,.06),0 8px 30px rgba(15,29,58,.08);
+    --maxw:1080px;
+    --f-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --f-mono:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0c1730; --surface:#12203f; --card:#17213d;
+      --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+      --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+      --blue:#56b5ff; --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0c1730; --surface:#12203f; --card:#17213d;
+    --ink:#f3f6fb; --ink-soft:#c4cddd; --muted:#8996ab;
+    --line:rgba(255,255,255,.10); --line-strong:rgba(255,255,255,.16);
+    --blue:#56b5ff; --green:#5fd39a; --green-bg:rgba(95,211,154,.14);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.34);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-sans);
+    line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+  .eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--orange);font-weight:600;margin:0 0 14px}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.02em;line-height:1.1;margin:0}
+  p{margin:0 0 1em}
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:72px 0 64px}
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(120% 90% at 82% -10%,var(--glow),transparent 55%),
+               radial-gradient(90% 80% at 8% 115%,rgba(47,53,111,.5),transparent 60%)}
+  .hero .wrap{position:relative}
+  .brandmark{font-family:var(--f-mono);font-weight:600;font-size:12.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:#fff;margin-bottom:44px}
+  .brandmark b{color:var(--orange)}
+  .hero h1{font-size:clamp(34px,6vw,64px);font-weight:800;color:#fff;max-width:16ch}
+  .hero .lead{margin-top:22px;max-width:52ch;font-size:clamp(17px,2.1vw,20px);color:rgba(255,255,255,.82)}
+  .chips{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;padding:7px 13px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.9);background:rgba(255,255,255,.05)}
+  section{padding:56px 0}
+  section + section{border-top:1px solid var(--line)}
+  h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;margin-bottom:18px}
+  .sub{color:var(--ink-soft);max-width:64ch}
+  .grid{display:grid;gap:18px;margin-top:28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;box-shadow:var(--shadow)}
+  .card h3{font-size:19px;font-weight:800;margin-bottom:10px}
+  .num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--orange);
+    color:#fff;font-family:var(--f-mono);font-weight:700;font-size:14px;margin-right:10px;vertical-align:middle}
+  .ab{display:grid;gap:8px;margin-top:12px;font-size:15.5px}
+  .ab div{padding:10px 14px;border-radius:10px;border:1px solid var(--line)}
+  .ab .a{background:rgba(15,29,58,.05)} .ab .d{background:var(--green-bg);border-color:transparent}
+  .ab b{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:4px;color:var(--muted)}
+  .ab .d b{color:var(--green)}
+  code{font-family:var(--f-mono);font-size:.92em;background:rgba(127,127,127,.12);padding:1px 6px;border-radius:6px}
+  figure{margin:36px 0 0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  figure img{display:block;width:100%;height:auto}
+  figcaption{padding:14px 18px;font-size:15px;color:var(--ink-soft);border-top:1px solid var(--line)}
+  .note{margin-top:28px;padding:18px 20px;border-left:4px solid var(--orange);background:var(--surface);border-radius:0 12px 12px 0;color:var(--ink-soft)}
+  .placeholder{margin-top:36px;border:2px dashed var(--line-strong);border-radius:16px;padding:40px 20px;text-align:center;color:var(--muted)}
+  footer{padding:44px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  footer b{color:var(--ink)}
+
+  .pt{background:var(--surface)}
+  h3.sub{font-size:19px;font-weight:700;margin:26px 0 10px}
+  ol,ul{padding-left:22px;margin:0 0 1em} li{margin:0 0 8px}
+  a{color:var(--blue)}
+  .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:620px;font-size:15.5px}
+  th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+  tr.flag td{background:rgba(255,106,44,.10)}
+  .note{border-left:4px solid var(--orange);background:var(--card);padding:14px 18px;border-radius:8px;margin-top:18px}
+  .sign{margin-top:28px;font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandmark">Brisbane <b>Surface</b> Solutions</div>
+    <p class="eyebrow">Handover &middot; October 2026</p>
+    <h1>Everything that is in place, and how to pass it on.</h1>
+    <p class="lead">The accounts, the setup and the decisions behind them, for the team taking over in October. No passwords on this page: every access is granted from the owner's account.</p>
+    <div class="chips">
+      <span class="chip">Google Ads</span><span class="chip">Google Business Profile</span><span class="chip">Website</span><span class="chip">Tag Manager</span><span class="chip">Instagram + Facebook</span><span class="chip">Brand files</span>
+    </div>
+  </div>
+</header>
+
+<section class="pt">
+  <div class="wrap">
+    <p class="eyebrow">Para o Leandro</p>
+    <h2>Como usar esta página</h2>
+    <p>Leandro, aqui está tudo o que está montado, em inglês, pra tu repassar direto pro pessoal novo. Não tem senha nenhuma aqui, de propósito: em cada ferramenta, tu mesmo dá acesso a eles com o e-mail deles, e eles entram com o login próprio. Assim tu continua dono de tudo, e ninguém precisa trocar senha depois.</p>
+    <p>Os passos abaixo levam uns dois minutos cada. Se travar em algum, me chama que eu explico.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">1 &middot; Who owns what</p>
+    <h2>Ownership at a glance</h2>
+    <p>Almost everything already sits in the business owner's accounts. One asset does not, and it is flagged.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Asset</th><th>Owner</th><th>How the new team gets in</th></tr></thead>
+        <tbody>
+          <tr><td>Google Ads</td><td>Business owner (the business Google account)</td><td>Owner adds the agency as a user</td></tr>
+          <tr><td>Google Business Profile</td><td>Business owner</td><td>Owner adds the agency as Manager</td></tr>
+          <tr><td>Website (WordPress)</td><td>Business owner holds the main Administrator login</td><td>Owner creates a user for the agency</td></tr>
+          <tr class="flag"><td>Google Tag Manager</td><td><b>Currently under the outgoing manager's Google account</b></td><td>Administration is being transferred to the owner. See section 5</td></tr>
+          <tr><td>Instagram + Facebook</td><td>Business Page; the Instagram link was set up through a former contractor's personal profile</td><td>Owner adds the agency as a partner in Meta Business Suite. See section 6</td></tr>
+          <tr><td>Domain + hosting</td><td>Domain registered to BR Concrete Solutions; technical contact is a previous agency</td><td>No action needed now. See section 7</td></tr>
+          <tr><td>Logo kit + photo library</td><td>Business owner (Google Drive)</td><td>Owner shares the folders</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">2 &middot; Google Ads</p>
+    <h2>One Search campaign, built for commercial work</h2>
+    <h3 class="sub">Giving access</h3>
+    <ol>
+      <li>Sign in at <b>ads.google.com</b> with the business account.</li>
+      <li>Admin &rsaquo; Access and security &rsaquo; the blue <b>+</b> button.</li>
+      <li>Enter the agency's email and choose <b>Admin</b> or <b>Standard</b>. If they use a manager (MCC) account, accept their link request in Admin &rsaquo; Access and security &rsaquo; Managers instead.</li>
+    </ol>
+    <h3 class="sub">What is set up, and why</h3>
+    <ul>
+      <li><b>One non-brand Search campaign</b>, Phrase and Exact match only. Broad match was left out on purpose until the account has more conversion volume.</li>
+      <li><b>Daily budget A$33.</b> It was raised for a few weeks in August and September and brought back on 24 September, because the extra spend did not return extra enquiries. The account re-entered learning on that date.</li>
+      <li><b>Locations:</b> Brisbane and surrounding councils, plus Gold Coast and Sunshine Coast (added in August). Gold Coast has converted; Sunshine Coast has shown little demand so far.</li>
+      <li><b>Conversions, measured through Tag Manager:</b> <i>Lead - Quote Form (Site)</i> is the primary conversion. <i>Phone Click (Site)</i> is <b>secondary</b> since 28 July, so the bidding optimises for quote requests. Anyone comparing weeks across 28 July should use the "All conversions" column.</li>
+      <li><b>Do not import GA4 conversions</b> into Google Ads. The same actions are already measured through Tag Manager, and importing them would double count.</li>
+      <li><b>Negative keywords at campaign level</b>: job seekers, DIY, training, equipment for sale or hire, and services the business does not offer (handyman, polished or decorative floors, pools, gutters, stumps, among others). <b>"driveway" is blocked by decision</b>: residential demand pulls budget away from the commercial work that converts.</li>
+      <li><b>Auto-apply recommendations: off.</b> Keep it off; it undoes deliberate settings.</li>
+      <li>The biggest lever found in September: the campaign loses more auctions to <b>ad rank</b> than to budget. Quality and relevance will move results more than extra spend.</li>
+    </ul>
+    <div class="note"><b>Worth checking:</b> one of the ad callouts reads "Fully Insured". Confirm the current insurance cover with the owner before keeping it live.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">3 &middot; Google Business Profile</p>
+    <h2>Live, verified and showing in public search</h2>
+    <h3 class="sub">Giving access</h3>
+    <ol>
+      <li>Search "Brisbane Surface Solutions" on Google while signed in with the business account, or open <b>business.google.com</b>.</li>
+      <li>Three dots &rsaquo; <b>Business Profile settings</b> &rsaquo; <b>People and access</b> &rsaquo; <b>Add</b>.</li>
+      <li>Enter the agency's email and choose <b>Manager</b>. Keep the business as the only Owner.</li>
+    </ol>
+    <h3 class="sub">What is set up</h3>
+    <ul>
+      <li>Primary category <i>Concrete contractor</i>, three secondary categories, 13 services, 7 service areas across South East Queensland, hours 7:00 to 16:00, logo, cover and 19 photos.</li>
+      <li>Linked to Google Ads in September (location asset active at account level).</li>
+      <li><b>The real gap is reviews.</b> The profile has none yet, while nearby competitors have 26 to 33. Review link to send to past clients: <b>g.page/r/CclnQXDUTSAsEBM/review</b></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">4 &middot; Website</p>
+    <h2>WordPress, Elementor and Rank Math</h2>
+    <h3 class="sub">Giving access</h3>
+    <ol>
+      <li>Sign in to the WordPress dashboard with the main Administrator login (the one sent on 27 September).</li>
+      <li><b>Users &rsaquo; Add New User</b>. Use the agency's email and the role they need (Editor for content, Administrator for technical work).</li>
+    </ol>
+    <h3 class="sub">What was fixed in September</h3>
+    <p>Full before and after: <a href="relatorio-site-setembro2026.html">Site report, September 2026</a>. In short: the Google title now leads with the business name, the footer email link works, the "residential" wording was removed, and the service areas section (including Gold Coast and Sunshine Coast), which existed but was hidden by a code error, now shows.</p>
+    <h3 class="sub">Before touching anything</h3>
+    <ul>
+      <li><b>There are pending plugin and core updates. Take a full backup first.</b> They were deliberately left alone without one.</li>
+      <li>Two users other than the main Administrator exist: one unknown account was reduced to Subscriber, and the outgoing manager's Administrator account will be removed once the handover is confirmed.</li>
+      <li>A <b>Privacy Policy draft</b> exists but was never published. Publishing an approved version unlocks Enhanced Conversions in Google Ads (a ready plan exists if the team wants it).</li>
+      <li>The site's Tag Manager snippet (GTM-KT5P58T3) is installed on the site; do not remove it while the conversions above are in use.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">5 &middot; Google Tag Manager</p>
+    <h2>The one asset that needs a transfer</h2>
+    <p>The container <b>GTM-KT5P58T3</b> holds the conversion tags for the quote form and phone clicks. It sits under the outgoing manager's Google account. To hand it over cleanly:</p>
+    <ol>
+      <li>The outgoing manager adds the business Google account as <b>Administrator</b> of the Tag Manager account, with <b>Publish</b> permission on the container.</li>
+      <li>The owner accepts the invitation and then adds the agency with the permissions they need.</li>
+      <li>Once the owner confirms access, the outgoing manager removes their own user.</li>
+    </ol>
+    <p>Nothing on the site changes during this process, and measurement keeps running throughout.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">6 &middot; Instagram + Facebook</p>
+    <h2>Content published through Meta Business Suite</h2>
+    <h3 class="sub">Giving access</h3>
+    <ol>
+      <li>Open <b>business.facebook.com</b> with the account that manages the Page.</li>
+      <li>Settings &rsaquo; <b>Partners</b> (if the agency has its own business portfolio) or <b>People</b> (to add a person), then assign the Facebook Page and the Instagram account.</li>
+    </ol>
+    <h3 class="sub">What to know</h3>
+    <ul>
+      <li><b>The Instagram account was linked to the Facebook Page through a former contractor's personal Facebook profile.</b> Scheduling works today, but the agency may run into it when changing settings. Do not unlink anything while posts are scheduled.</li>
+      <li>Posts for the first half of October may already be scheduled in the Planner. Check there before publishing, so nothing doubles up.</li>
+      <li>Every post since July follows one visual system (navy and orange, hazard stripe, a red palette reserved for silica and compliance) and an editorial line aimed at builders, project managers and fit-out teams: <a href="linha-editorial.html">Editorial line</a>.</li>
+      <li><b>A safety rule from the owner, for every photo:</b> no cable, lead or hose lying loose on the floor. A hose attached to a machine in use is fine.</li>
+      <li>Public name in content is <b>"Andrew"</b>, at the owner's request.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">7 &middot; Domain, email and brand files</p>
+    <h2>The rest</h2>
+    <ul>
+      <li><b>Domain</b> brisbanesurfacesolutions.com.au is registered to BR Concrete Solutions (correct ABN), registrar Instra. The technical contact is still a previous agency; worth updating to the business at the next renewal.</li>
+      <li><b>Email</b> contact@brisbanesurfacesolutions.com.au runs on Hostinger. An email signature with the ABN was delivered in September.</li>
+      <li><b>Logo kit</b> (five versions, vectorised from the original lettering) and the <b>photo library</b> sit in the business's Google Drive. The older black logo with the wrong name, "Surface and Patch Solutions", is retired for any new artwork.</li>
+      <li>A separate Google account was created in September for the business's tools. Its login and recovery details go to the owner directly.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Closing</p>
+    <h2>Any question about the setup</h2>
+    <p>Anything on this page that needs more detail, the reasoning behind a setting, or a file that is missing: get in touch and it will be answered.</p>
+    <p class="sign">Fabricio Kaempf | Estrategista Digital &middot; @fabriciokaempf</p>
+  </div>
+</section>
+
+</body>
+</html>
